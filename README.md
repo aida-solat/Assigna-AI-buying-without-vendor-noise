@@ -1,7 +1,7 @@
-# Assigna __ AI buying without vendor noise
+# Assigna \_\_ AI buying without vendor noise
 
 [![CI](https://github.com/aida-solat/Assigna-AI-buying-without-vendor-noise/actions/workflows/ci.yml/badge.svg)](https://github.com/aida-solat/Assigna-AI-buying-without-vendor-noise/actions/workflows/ci.yml)
-[![License: BSL 1.1](https://img.shields.io/badge/License-BSL%201.1-blue.svg)](LICENSE)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Backend Tests](https://img.shields.io/badge/tests-71%20passing-brightgreen)](backend/)
 [![Frontend Routes](https://img.shields.io/badge/routes-26-blue)](frontend/)
 
@@ -240,7 +240,7 @@ If Assigna is useful to your work or research, consider [sponsoring the project]
 
 ## License
 
-[Business Source License 1.1](LICENSE) — free for non-commercial use. Converts to Apache 2.0 after 4 years.
+[Apache License 2.0](LICENSE) — open source, permissive, production-ready.
 
 ---
 

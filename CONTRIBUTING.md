@@ -33,4 +33,4 @@ Assigna is built and maintained by Deciwa. We welcome contributions that improve
 
 ## License
 
-By contributing, you agree that your contributions will be licensed under the BSL 1.1 license.
+By contributing, you agree that your contributions will be licensed under the Apache License 2.0.
