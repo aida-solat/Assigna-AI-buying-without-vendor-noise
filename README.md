@@ -1,4 +1,4 @@
-# Assigna
+# Assigna __ AI buying without vendor noise
 
 [![CI](https://github.com/aida-solat/Assigna-AI-buying-without-vendor-noise/actions/workflows/ci.yml/badge.svg)](https://github.com/aida-solat/Assigna-AI-buying-without-vendor-noise/actions/workflows/ci.yml)
 [![License: BSL 1.1](https://img.shields.io/badge/License-BSL%201.1-blue.svg)](LICENSE)
