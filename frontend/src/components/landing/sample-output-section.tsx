@@ -1,5 +1,4 @@
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, Lock } from "lucide-react";
@@ -8,12 +7,10 @@ export function SampleOutputSection() {
   return (
     <section className="py-20 px-6">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-4">
-          What you get
-        </h2>
+        <h2 className="text-3xl font-bold text-center mb-4">What you get</h2>
         <p className="text-center text-muted-foreground mb-12 max-w-lg mx-auto">
-          A Decision Brief — not a vendor list. Evidence, reasoning, risks,
-          and questions before any sales call.
+          A Decision Brief — not a vendor list. Evidence, reasoning, risks, and
+          questions before any sales call.
         </p>
 
         <Card className="relative overflow-hidden">

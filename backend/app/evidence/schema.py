@@ -6,7 +6,7 @@ This is the atomic unit of trust in Assigna's scoring pipeline.
 
 from __future__ import annotations
 
-from datetime import date, datetime
+from datetime import date
 from enum import Enum
 from typing import Optional
 

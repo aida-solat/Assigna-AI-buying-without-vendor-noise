@@ -241,7 +241,7 @@ export default function NewProblemPage() {
       const res = await apiPost<DecisionBriefResponse>("/assign", input);
       setResult(res);
       setStep("done");
-    } catch (e) {
+    } catch {
       setError("Failed to get diagnosis. Is the backend running?");
       setStep("context");
     } finally {

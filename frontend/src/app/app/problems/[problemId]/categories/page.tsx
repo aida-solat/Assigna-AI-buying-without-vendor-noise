@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, XCircle, ArrowRight, HelpCircle } from "lucide-react";
+import { CheckCircle2, XCircle, ArrowRight } from "lucide-react";
 
 const SAMPLE_CATEGORIES = {
   primary: {

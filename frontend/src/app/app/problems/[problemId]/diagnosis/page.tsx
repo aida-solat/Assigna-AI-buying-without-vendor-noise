@@ -5,16 +5,9 @@ import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ScoreBar } from "@/components/ui/score-bar";
 import { DiagnosisHeader } from "@/components/diagnosis/diagnosis-header";
 import { EvidenceGapPanel } from "@/components/diagnosis/evidence-gap-panel";
-import {
-  ArrowRight,
-  CheckCircle2,
-  HelpCircle,
-  XCircle,
-  AlertCircle,
-} from "lucide-react";
+import { ArrowRight, CheckCircle2, XCircle, AlertCircle } from "lucide-react";
 
 const SAMPLE_DIAGNOSIS = {
   confidence: 0.82,

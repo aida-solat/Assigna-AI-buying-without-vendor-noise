@@ -160,8 +160,7 @@ const SAMPLE_VENDORS: VendorRecommendation[] = [
 ];
 
 export default function VendorShortlistPage() {
-  const params = useParams();
-  const problemId = params.problemId as string;
+  useParams();
 
   const [budgetFit, setBudgetFit] = useState("Any");
   const [integrationFit, setIntegrationFit] = useState("Any");

@@ -9,11 +9,11 @@ from __future__ import annotations
 
 import hashlib
 import json
-from dataclasses import asdict, dataclass, field
+from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from typing import Any, Optional
 
-from app.engine.assignment import AssignmentResult, VendorAssignment
+from app.engine.assignment import AssignmentResult
 from app.engine.brief import DecisionBrief
 
 

@@ -4,7 +4,6 @@ import { useParams } from "next/navigation";
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { ScoreBar } from "@/components/ui/score-bar";
 import {
   Shield,
@@ -13,7 +12,6 @@ import {
   Building2,
   CheckCircle2,
   AlertTriangle,
-  XCircle,
   HelpCircle,
 } from "lucide-react";
 
@@ -124,8 +122,7 @@ const SAMPLE_VENDOR_DATA = {
 };
 
 export default function BuyerVendorDetailPage() {
-  const params = useParams();
-  const vendorId = params.vendorId as string;
+  useParams();
   const [tab, setTab] = useState<Tab>("overview");
   const v = SAMPLE_VENDOR_DATA;
 

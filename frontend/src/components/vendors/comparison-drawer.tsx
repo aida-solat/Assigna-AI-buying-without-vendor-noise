@@ -1,6 +1,5 @@
 "use client";
 
-import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ScoreBar } from "@/components/ui/score-bar";
 import { X } from "lucide-react";

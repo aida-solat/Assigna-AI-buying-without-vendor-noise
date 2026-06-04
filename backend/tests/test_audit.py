@@ -1,8 +1,7 @@
 """Tests for the audit trail module."""
 
-import pytest
 
-from app.audit.trace import TraceBuilder, DecisionTrace
+from app.audit.trace import TraceBuilder
 from app.engine.assignment import AssignmentEngine
 from app.engine.brief import BriefGenerator
 from app.taxonomy.diagnosis import BuyerInput

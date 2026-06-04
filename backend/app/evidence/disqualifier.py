@@ -101,7 +101,6 @@ class VendorDisqualifier:
         # Gate 5: Budget floor violation
         if buyer_budget is not None:
             budget_min = category.budget_band.min
-            budget_max = category.budget_band.max
             if buyer_budget < budget_min * 0.5:
                 result.passed = False
                 result.reasons.append(

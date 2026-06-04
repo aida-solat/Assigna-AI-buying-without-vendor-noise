@@ -17,7 +17,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Optional
 
-from app.taxonomy.schema import EvidenceRequirement, TaxonomyCategory
+from app.taxonomy.schema import TaxonomyCategory
 
 
 @dataclass

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
