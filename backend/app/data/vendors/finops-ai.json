@@ -1,0 +1,75 @@
+{
+  "vendor_id": "finops-ai",
+  "vendor_name": "FinOps AI",
+  "description": "Finance automation platform specializing in month-end close acceleration, AP/AR automation, and bank reconciliation. Built for mid-market companies on SAP, NetSuite, or Xero.",
+  "website": "https://finops-ai.example.com",
+  "headquarters": "Zurich, Switzerland",
+  "founded_year": 2017,
+  "company_size": "51-200",
+  "categories": [
+    {
+      "category_id": "finance_backoffice_automation",
+      "strength": 0.92,
+      "evidence": [
+        {
+          "type": "close_reduction_case_study",
+          "description": "Reduced month-end close from 8 days to 3 days for 200-person manufacturing company on SAP",
+          "quality": 0.90,
+          "status": "verified"
+        },
+        {
+          "type": "erp_integration_proof",
+          "description": "Certified SAP, NetSuite, and Xero integrations. Microsoft Dynamics via partner.",
+          "quality": 0.88,
+          "status": "verified"
+        },
+        {
+          "type": "compliance_certification",
+          "description": "SOC2 Type II, ISO 27001, SOX-ready audit trail, IFRS and local GAAP support",
+          "quality": 0.92,
+          "status": "verified"
+        },
+        {
+          "type": "accuracy_metrics",
+          "description": "99.4% transaction matching accuracy, full audit trail with user/timestamp/reason for every action",
+          "quality": 0.85,
+          "status": "verified"
+        },
+        {
+          "type": "multi_entity_proof",
+          "description": "Supports multi-entity with intercompany reconciliation and multi-currency (12 currencies)",
+          "quality": 0.80,
+          "status": "self_declared"
+        }
+      ],
+      "integrations_supported": ["SAP S/4HANA", "SAP Business One", "NetSuite", "Xero", "Microsoft Dynamics (via partner)", "Banking APIs (SWIFT, SEPA)"],
+      "typical_timeline_weeks": 10,
+      "pricing_notes": "Annual subscription €35K-€150K based on transaction volume and modules"
+    },
+    {
+      "category_id": "ai_document_processing",
+      "strength": 0.55,
+      "evidence": [
+        {
+          "type": "accuracy_benchmark",
+          "description": "Invoice extraction as part of AP module — 94% accuracy on standard invoice formats",
+          "quality": 0.65,
+          "status": "self_declared"
+        },
+        {
+          "type": "integration_proof",
+          "description": "Built into finance platform, no separate integration needed",
+          "quality": 0.70,
+          "status": "self_declared"
+        }
+      ],
+      "integrations_supported": ["SAP", "NetSuite"],
+      "typical_timeline_weeks": 10,
+      "pricing_notes": "Included in finance automation license"
+    }
+  ],
+  "languages_supported": ["de", "en", "fr", "it"],
+  "certifications": ["SOC2 Type II", "ISO 27001", "SOX-ready"],
+  "deployment_model": ["cloud", "hybrid"],
+  "red_flags": ["QuickBooks not supported", "Minimum contract 12 months"]
+}

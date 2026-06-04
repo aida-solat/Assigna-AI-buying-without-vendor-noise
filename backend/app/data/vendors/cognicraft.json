@@ -1,0 +1,87 @@
+{
+  "vendor_id": "cognicraft",
+  "vendor_name": "CogniCraft",
+  "description": "Custom AI consulting agency specializing in multi-agent systems, enterprise RAG deployments, and bespoke AI automation. Team of 25 ML engineers and solution architects.",
+  "website": "https://cognicraft.example.com",
+  "headquarters": "Vienna, Austria",
+  "founded_year": 2021,
+  "company_size": "11-50",
+  "categories": [
+    {
+      "category_id": "custom_ai_consulting",
+      "strength": 0.85,
+      "evidence": [
+        {
+          "type": "relevant_portfolio",
+          "description": "12 completed custom AI projects: 4 multi-agent systems, 5 enterprise RAG, 3 process automation. All with documented outcomes.",
+          "quality": 0.82,
+          "status": "verified"
+        },
+        {
+          "type": "technical_depth_proof",
+          "description": "Team includes 8 senior ML engineers (avg 7yr experience), expertise in LangChain, LlamaIndex, custom fine-tuning, AWS/GCP",
+          "quality": 0.80,
+          "status": "verified"
+        },
+        {
+          "type": "client_reference",
+          "description": "3 referenceable clients: logistics company (multi-agent), insurance (RAG), manufacturing (custom automation)",
+          "quality": 0.78,
+          "status": "verified"
+        },
+        {
+          "type": "delivery_methodology",
+          "description": "2-week discovery → 4-week POC → iterative delivery in 2-week sprints. Milestone-based billing.",
+          "quality": 0.75,
+          "status": "self_declared"
+        },
+        {
+          "type": "knowledge_transfer_plan",
+          "description": "Standard handoff package: documentation, training sessions, 3-month support, code ownership transfer",
+          "quality": 0.70,
+          "status": "self_declared"
+        }
+      ],
+      "integrations_supported": ["AWS", "GCP", "Azure", "On-premise", "Custom APIs"],
+      "typical_timeline_weeks": 16,
+      "pricing_notes": "Project-based €60K-€300K or retainer €15K-€40K/month"
+    },
+    {
+      "category_id": "enterprise_knowledge_search",
+      "strength": 0.75,
+      "evidence": [
+        {
+          "type": "accuracy_benchmark",
+          "description": "Custom RAG deployments achieving 89% answer accuracy with <5% hallucination rate on client data",
+          "quality": 0.78,
+          "status": "self_declared"
+        },
+        {
+          "type": "connector_proof",
+          "description": "Built connectors for SharePoint, Confluence, Google Drive, custom databases",
+          "quality": 0.75,
+          "status": "verified"
+        },
+        {
+          "type": "access_control_demo",
+          "description": "Permission-aware retrieval integrated with Azure AD and custom RBAC",
+          "quality": 0.72,
+          "status": "self_declared"
+        },
+        {
+          "type": "source_citation",
+          "description": "All answers include document source, page, and confidence score",
+          "quality": 0.80,
+          "status": "verified"
+        }
+      ],
+      "integrations_supported": ["SharePoint", "Confluence", "Google Drive", "Custom databases", "Azure AD"],
+      "typical_timeline_weeks": 12,
+      "pricing_notes": "Custom RAG project typically €80K-€180K"
+    }
+  ],
+  "languages_supported": ["de", "en"],
+  "certifications": ["ISO 27001"],
+  "deployment_model": ["cloud", "on-premise", "hybrid"],
+  "red_flags": ["Young company (2021)", "Limited language support (DE/EN only)", "No product — everything is custom-built"]
+}

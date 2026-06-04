@@ -1,0 +1,157 @@
+{
+  "category_id": "customer_support_automation",
+  "category_name": "Customer Support Automation",
+  "category_type": "product_category",
+  "parent_category": "Customer Experience",
+  "description": "AI-powered automation of customer support interactions across chat, email, phone, and ticketing systems. Includes auto-resolution of common queries, intelligent routing, agent augmentation, and self-service — reducing response times and support costs while maintaining CSAT.",
+  "buyer_problem_patterns": [
+    "Support tickets are growing faster than our team can handle",
+    "Repetitive questions consume senior agent time",
+    "Response times are too slow and SLAs are missed",
+    "We can't provide 24/7 support with current staff",
+    "Ticket routing is manual and inconsistent",
+    "Agents spend time looking up answers instead of helping customers"
+  ],
+  "diagnostic_triggers": {
+    "positive_signals": [
+      "High ticket/interaction volume mentioned (>500/month)",
+      "Repetitive questions identified as major time sink",
+      "SLA pressure or customer complaints about speed",
+      "24/7 coverage desired but not staffed",
+      "Existing knowledge base or FAQ content available to train on"
+    ],
+    "negative_signals": [
+      "Problem is internal employee support (use Enterprise RAG)",
+      "Very low volume with complex unique issues",
+      "Support is purely relationship-driven (high-touch enterprise)",
+      "No existing content/FAQs to train the AI on"
+    ],
+    "minimum_thresholds": {
+      "support_interactions_per_month": 100,
+      "repetitive_question_percentage": 30
+    },
+    "disqualifiers": [
+      "Fewer than 100 support interactions per month (ROI too low)",
+      "No existing knowledge base, FAQ, or support content to train on",
+      "All interactions require deep human expertise with no repetition",
+      "Buyer has no helpdesk system and doesn't want one"
+    ]
+  },
+  "typical_use_cases": [
+    "Chatbot for common customer questions (FAQ automation)",
+    "Ticket classification and routing to correct team",
+    "Agent-assist (suggested responses and information lookup)",
+    "Self-service knowledge base with AI search",
+    "Multi-channel support automation (chat + email + phone)",
+    "SLA monitoring and automatic escalation",
+    "Post-interaction summarization for agent handoff"
+  ],
+  "not_for": [
+    "Companies with <100 support interactions/month (too low volume for ROI)",
+    "Companies needing only internal employee support (use Enterprise RAG)",
+    "Highly complex technical support requiring deep human expertise every time",
+    "Companies without existing support content/FAQs to train on",
+    "Companies that sell purely through human relationships (high-touch enterprise sales support)",
+    "Startups without established support processes or ticket history"
+  ],
+  "required_buyer_inputs": [
+    "Monthly support volume (tickets, chats, calls)",
+    "Current channels (email, chat, phone, social media)",
+    "Top 10-20 most common question categories",
+    "Current tools (Zendesk, Intercom, Freshdesk, Salesforce Service Cloud, etc.)",
+    "Current resolution rate and average handle time",
+    "Languages needed for support",
+    "Existing knowledge base content availability"
+  ],
+  "typical_integrations": ["Zendesk", "Intercom", "Freshdesk", "Salesforce Service Cloud", "HubSpot Service", "LiveChat", "Twilio", "Front", "Help Scout"],
+  "buyer_roles": ["Head of Support", "VP Customer Experience", "COO", "Head of Operations", "Customer Success Director"],
+  "success_metrics": [
+    "Auto-resolution rate (% resolved without human)",
+    "Average response time reduction",
+    "CSAT score maintenance or improvement",
+    "Ticket deflection rate",
+    "Agent productivity (tickets/agent/day)",
+    "Cost per resolution",
+    "First contact resolution rate improvement"
+  ],
+  "implementation_complexity": "medium",
+  "typical_timeline_weeks": { "min": 4, "max": 10 },
+  "budget_band": {
+    "min": 10000,
+    "max": 150000,
+    "currency": "EUR",
+    "model": "per_resolution or per_agent_seat or monthly_subscription"
+  },
+  "evidence_requirements": [
+    {
+      "type": "auto_resolution_rate",
+      "description": "Documented auto-resolution rates achieved in similar industry/volume",
+      "weight": 0.30,
+      "required": true
+    },
+    {
+      "type": "csat_preservation",
+      "description": "Proof that CSAT was maintained or improved after AI deployment",
+      "weight": 0.25,
+      "required": true
+    },
+    {
+      "type": "helpdesk_integration",
+      "description": "Demonstrated integration with buyer's specific helpdesk platform",
+      "weight": 0.20,
+      "required": true
+    },
+    {
+      "type": "escalation_handling",
+      "description": "Clear demonstration of human handoff process with context preservation",
+      "weight": 0.15,
+      "required": true
+    },
+    {
+      "type": "multi_language",
+      "description": "Proof of multi-language capability if buyer needs it",
+      "weight": 0.10,
+      "required": false
+    }
+  ],
+  "red_flags_for_buyer": [
+    "Vendor claims >80% auto-resolution without seeing your actual data",
+    "No graceful handoff to human agents (customer gets stuck)",
+    "No analytics on what AI couldn't answer (blind spots hidden)",
+    "Requires complete replacement of existing helpdesk",
+    "No way to review/correct AI responses or improve over time",
+    "CSAT data not tracked or not shared transparently"
+  ],
+  "red_flags_for_vendor": [
+    "Buyer has no existing knowledge base or FAQ content to train on",
+    "Buyer expects zero human involvement from day one",
+    "Highly technical product with no documentation or support history",
+    "Buyer's current CSAT is already 95%+ (diminishing returns, high risk of degradation)"
+  ],
+  "vendor_capability_requirements": [
+    "Multi-channel support (chat + email at minimum)",
+    "Helpdesk platform integration (native connector)",
+    "Knowledge base ingestion and training",
+    "Human handoff with full context preservation",
+    "Analytics and reporting dashboard",
+    "Conversation design / flow builder for non-technical users",
+    "Multi-language support",
+    "Feedback loop (learn from corrections)"
+  ],
+  "decision_questions": [
+    "What auto-resolution rate do similar companies in our industry achieve?",
+    "How does handoff to human agents work — is context preserved?",
+    "What data/content do you need from us to get started?",
+    "How do you handle questions the AI can't answer?",
+    "What is the training/ramp-up period before production?",
+    "Can we review and override AI responses?",
+    "How do you measure and report on CSAT impact?",
+    "What does the improvement cycle look like (learning from failures)?"
+  ],
+  "adjacent_categories": ["email_workflow_automation", "enterprise_knowledge_search"],
+  "differentiation_from_adjacent": {
+    "vs_email_workflow_automation": "Support automation is customer-facing with conversational interaction; email automation is back-office inbox triage without customer conversation.",
+    "vs_enterprise_knowledge_search": "Support automation is external-facing for customers; enterprise RAG is internal-facing for employees.",
+    "vs_workflow_orchestration": "Support automation handles the customer interaction layer; workflow orchestration handles internal task routing after the interaction."
+  }
+}

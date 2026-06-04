@@ -1,0 +1,157 @@
+{
+  "category_id": "ai_document_processing",
+  "category_name": "AI Document Processing & Extraction",
+  "category_type": "product_category",
+  "parent_category": "Document Automation",
+  "description": "Automated extraction of structured data from unstructured documents (invoices, contracts, delivery notes, forms) using OCR + NLP/LLM. Converts paper/PDF-based manual data entry into machine-readable output fed into downstream systems.",
+  "buyer_problem_patterns": [
+    "We manually enter data from invoices/PDFs into our ERP",
+    "Our team spends hours reading supplier documents",
+    "We have high error rates in data entry",
+    "We process hundreds of documents per week manually",
+    "Invoice matching takes too long",
+    "We receive documents in multiple formats and languages"
+  ],
+  "diagnostic_triggers": {
+    "positive_signals": [
+      "High document volume mentioned (>50/week)",
+      "Manual data entry explicitly cited as pain",
+      "ERP or target system exists to receive data",
+      "Error rate or compliance mentioned",
+      "Cost of current process quantified"
+    ],
+    "negative_signals": [
+      "Buyer says 'we need AI' without specifying document types",
+      "Problem is about workflow routing, not data extraction",
+      "Documents are highly creative/unstructured (reports, marketing)"
+    ],
+    "minimum_thresholds": {
+      "documents_per_week": 50,
+      "has_target_system": true
+    },
+    "disqualifiers": [
+      "Fewer than 20 documents per week (ROI negative)",
+      "No target system to receive extracted data",
+      "Documents are handwritten with no OCR-viable quality",
+      "Buyer needs real-time streaming (this is batch/near-real-time)"
+    ]
+  },
+  "typical_use_cases": [
+    "Invoice data extraction to ERP",
+    "Delivery note parsing",
+    "Contract clause extraction",
+    "Purchase order matching",
+    "Customs/shipping document processing",
+    "Form digitization",
+    "Receipt processing for expense management"
+  ],
+  "not_for": [
+    "Companies with fewer than 50 documents/week (ROI too low)",
+    "Companies needing full workflow redesign (this is extraction only)",
+    "Highly unstructured creative content (marketing, reports)",
+    "Companies without target system to receive extracted data",
+    "Real-time streaming document needs (this is batch/near-real-time)",
+    "Companies that need human decision-making on content (this automates extraction, not judgement)"
+  ],
+  "required_buyer_inputs": [
+    "Document types and volume per week/month",
+    "Current manual process description and time spent",
+    "Target system (ERP, database, spreadsheet)",
+    "Languages in documents",
+    "Accuracy tolerance (what error rate is acceptable?)",
+    "Document format variety (PDF, scan, email, photo)",
+    "Current cost of manual processing"
+  ],
+  "typical_integrations": ["SAP", "Oracle", "Microsoft Dynamics", "NetSuite", "CSV/API export", "Email inbox", "SharePoint", "Google Drive"],
+  "buyer_roles": ["Head of Operations", "Head of Finance", "CFO", "Procurement Director", "IT Manager", "Shared Services Manager"],
+  "success_metrics": [
+    "Processing time reduction (%)",
+    "Data entry error reduction (%)",
+    "FTE hours saved per month",
+    "Cost per document processed",
+    "Straight-through processing rate (%)",
+    "Exception rate (% needing human review)"
+  ],
+  "implementation_complexity": "medium",
+  "typical_timeline_weeks": { "min": 4, "max": 12 },
+  "budget_band": {
+    "min": 15000,
+    "max": 200000,
+    "currency": "EUR",
+    "model": "per_document or annual_subscription"
+  },
+  "evidence_requirements": [
+    {
+      "type": "accuracy_benchmark",
+      "description": "Documented accuracy rate on similar document types in similar industry",
+      "weight": 0.30,
+      "required": true
+    },
+    {
+      "type": "same_industry_case_study",
+      "description": "Case study from same or adjacent industry with measurable volume/time outcomes",
+      "weight": 0.25,
+      "required": true
+    },
+    {
+      "type": "integration_proof",
+      "description": "Demonstrated integration with buyer's ERP/target system",
+      "weight": 0.20,
+      "required": true
+    },
+    {
+      "type": "language_support",
+      "description": "Verification of support for buyer's document languages",
+      "weight": 0.10,
+      "required": false
+    },
+    {
+      "type": "pilot_availability",
+      "description": "Ability to run POC on buyer's actual document samples",
+      "weight": 0.15,
+      "required": false
+    }
+  ],
+  "red_flags_for_buyer": [
+    "Vendor claims 99% accuracy without specifying document type or conditions",
+    "No human-in-the-loop option for exceptions",
+    "No clear integration path to buyer's existing systems",
+    "Pricing unclear or usage-based without caps",
+    "No demo on buyer's actual document samples",
+    "Vendor conflates extraction with full process automation"
+  ],
+  "red_flags_for_vendor": [
+    "Buyer has no standardized document types",
+    "Buyer expects 100% automation with zero exceptions",
+    "No IT contact or system access available",
+    "Budget below 10K EUR (not viable for quality solution)",
+    "Buyer conflates document extraction with full workflow redesign"
+  ],
+  "vendor_capability_requirements": [
+    "OCR engine (own or integrated)",
+    "Template-free or adaptive extraction (not just fixed templates)",
+    "Multi-language support",
+    "Confidence scoring per extracted field",
+    "Exception routing / human review UI",
+    "API or direct ERP connector",
+    "Audit trail for compliance"
+  ],
+  "decision_questions": [
+    "What is your accuracy rate on [specific document type] in [our industry]?",
+    "How do you handle documents that don't match expected formats?",
+    "What is your pricing at our expected volume of [X] documents/week?",
+    "Can you process documents in [languages needed]?",
+    "What does integration with [our ERP] look like technically?",
+    "What is the typical time from kickoff to production?",
+    "Do you offer a pilot/POC on our real documents before commitment?",
+    "What happens when extraction confidence is low?",
+    "What is your STP (straight-through processing) rate for similar clients?"
+  ],
+  "adjacent_categories": ["email_workflow_automation", "procurement_workflow_automation", "workflow_orchestration"],
+  "differentiation_from_adjacent": {
+    "vs_email_workflow_automation": "Document processing extracts structured data from files; email automation classifies and routes messages. Often co-deployed.",
+    "vs_procurement_workflow_automation": "Document processing is a component within procurement automation — it handles the extraction layer, not the full procurement workflow.",
+    "vs_workflow_orchestration": "Document processing extracts data; workflow orchestration routes tasks between systems. Complementary, not competing.",
+    "vs_custom_ai_consulting": "Off-the-shelf document AI vs custom-built solution. Prefer off-the-shelf if document types are standard and volume justifies it."
+  }
+}

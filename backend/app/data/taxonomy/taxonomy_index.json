@@ -1,0 +1,107 @@
+{
+  "categories": {
+    "ai_document_processing": "ai_document_processing.json",
+    "compliance_document_review": "compliance_document_review.json",
+    "custom_ai_consulting": "custom_ai_consulting.json",
+    "customer_support_automation": "customer_support_automation.json",
+    "email_workflow_automation": "email_workflow_automation.json",
+    "enterprise_knowledge_search": "enterprise_knowledge_search.json",
+    "finance_backoffice_automation": "finance_backoffice_automation.json",
+    "procurement_workflow_automation": "procurement_workflow_automation.json",
+    "sales_operations_automation": "sales_operations_automation.json",
+    "workflow_orchestration": "workflow_orchestration.json"
+  },
+  "parent_categories": {
+    "Document Automation": [
+      "ai_document_processing",
+      "email_workflow_automation"
+    ],
+    "Operations Automation": [
+      "compliance_document_review",
+      "finance_backoffice_automation",
+      "procurement_workflow_automation",
+      "workflow_orchestration"
+    ],
+    "Custom Solutions": [
+      "custom_ai_consulting"
+    ],
+    "Customer Experience": [
+      "customer_support_automation"
+    ],
+    "Knowledge Management": [
+      "enterprise_knowledge_search"
+    ],
+    "Revenue Operations": [
+      "sales_operations_automation"
+    ]
+  },
+  "category_types": {
+    "product_category": [
+      "ai_document_processing",
+      "customer_support_automation",
+      "email_workflow_automation",
+      "enterprise_knowledge_search",
+      "finance_backoffice_automation",
+      "sales_operations_automation",
+      "workflow_orchestration"
+    ],
+    "hybrid": [
+      "compliance_document_review",
+      "procurement_workflow_automation"
+    ],
+    "service_delivery_model": [
+      "custom_ai_consulting"
+    ]
+  },
+  "adjacency_graph": {
+    "ai_document_processing": [
+      "email_workflow_automation",
+      "procurement_workflow_automation",
+      "workflow_orchestration"
+    ],
+    "compliance_document_review": [
+      "ai_document_processing",
+      "enterprise_knowledge_search",
+      "finance_backoffice_automation"
+    ],
+    "custom_ai_consulting": [
+      "enterprise_knowledge_search",
+      "workflow_orchestration",
+      "all_product_categories"
+    ],
+    "customer_support_automation": [
+      "email_workflow_automation",
+      "enterprise_knowledge_search"
+    ],
+    "email_workflow_automation": [
+      "ai_document_processing",
+      "customer_support_automation",
+      "workflow_orchestration"
+    ],
+    "enterprise_knowledge_search": [
+      "customer_support_automation",
+      "compliance_document_review"
+    ],
+    "finance_backoffice_automation": [
+      "ai_document_processing",
+      "procurement_workflow_automation",
+      "compliance_document_review"
+    ],
+    "procurement_workflow_automation": [
+      "ai_document_processing",
+      "finance_backoffice_automation",
+      "workflow_orchestration"
+    ],
+    "sales_operations_automation": [
+      "workflow_orchestration",
+      "customer_support_automation",
+      "email_workflow_automation"
+    ],
+    "workflow_orchestration": [
+      "procurement_workflow_automation",
+      "finance_backoffice_automation",
+      "email_workflow_automation",
+      "sales_operations_automation"
+    ]
+  }
+}

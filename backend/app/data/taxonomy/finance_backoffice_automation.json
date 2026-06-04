@@ -1,0 +1,164 @@
+{
+  "category_id": "finance_backoffice_automation",
+  "category_name": "Finance Back-Office Automation",
+  "category_type": "product_category",
+  "parent_category": "Operations Automation",
+  "description": "AI-powered automation of finance operations including accounts payable/receivable, bank reconciliation, expense management, financial close, and reporting. Reduces manual bookkeeping and accelerates month-end close while maintaining audit-grade accuracy.",
+  "buyer_problem_patterns": [
+    "Month-end close takes too long (5+ days)",
+    "AP/AR processing is mostly manual and error-prone",
+    "Bank reconciliation takes hours every week",
+    "Expense reports are manually reviewed and frequently incorrect",
+    "We can't get real-time visibility into financial position",
+    "Finance team is overloaded with repetitive transactional work"
+  ],
+  "diagnostic_triggers": {
+    "positive_signals": [
+      "Month-end close duration quantified as pain (>3 days)",
+      "Manual AP/AR processing mentioned with volume",
+      "Reconciliation backlog or errors cited",
+      "Finance team headcount vs transaction volume mismatch",
+      "Audit readiness or compliance pressure mentioned"
+    ],
+    "negative_signals": [
+      "Problem is about procurement/vendor management (not finance ops)",
+      "Buyer needs full ERP replacement",
+      "Problem is strategic financial planning/FP&A (not transactional)",
+      "Issue is revenue recognition or complex accounting judgement"
+    ],
+    "minimum_thresholds": {
+      "monthly_transactions": 500,
+      "finance_team_size": 2,
+      "has_accounting_system": true
+    },
+    "disqualifiers": [
+      "Fewer than 200 monthly transactions (manual still viable)",
+      "No accounting system in place (need ERP first, not automation)",
+      "Buyer needs full ERP/accounting system replacement",
+      "Problem is purely strategic FP&A (not back-office automation)",
+      "Company is pre-revenue startup without financial ops complexity"
+    ]
+  },
+  "typical_use_cases": [
+    "Accounts payable automation (invoice receipt to approval to payment)",
+    "Accounts receivable automation (invoicing to collection to matching)",
+    "Bank reconciliation automation",
+    "Expense report processing and policy enforcement",
+    "Financial close acceleration",
+    "Intercompany reconciliation",
+    "Payment fraud detection",
+    "Accrual and journal entry automation"
+  ],
+  "not_for": [
+    "Companies without an existing accounting/ERP system (build foundation first)",
+    "Companies needing full ERP replacement (this augments, not replaces)",
+    "Strategic FP&A or financial planning needs (this is transactional automation)",
+    "Companies with <200 monthly transactions (ROI unlikely)",
+    "Startups pre-revenue without finance ops complexity",
+    "Companies needing only invoice data extraction (use AI Document Processing for that component)"
+  ],
+  "required_buyer_inputs": [
+    "Monthly transaction volume (AP invoices, payments, journal entries)",
+    "Current accounting/ERP system",
+    "Current close timeline (days to close)",
+    "Finance team size and allocation of time",
+    "Main pain points (speed, accuracy, visibility, compliance)",
+    "Audit/compliance requirements (SOX, IFRS, local GAAP)",
+    "Bank and payment systems used",
+    "Multi-entity/multi-currency needs"
+  ],
+  "typical_integrations": ["SAP", "Oracle Financials", "NetSuite", "Xero", "QuickBooks", "Microsoft Dynamics", "Banking APIs", "Expense systems (Expensify, SAP Concur)"],
+  "buyer_roles": ["CFO", "Finance Director", "Controller", "Head of Accounting", "VP Finance", "Shared Services Director"],
+  "success_metrics": [
+    "Days to close reduction",
+    "AP/AR processing time reduction (%)",
+    "Reconciliation time reduction",
+    "Transaction error rate reduction (%)",
+    "Finance FTE time freed for analysis (%)",
+    "Audit preparation time reduction",
+    "Cost per transaction processed"
+  ],
+  "implementation_complexity": "medium-high",
+  "typical_timeline_weeks": { "min": 8, "max": 20 },
+  "budget_band": {
+    "min": 20000,
+    "max": 300000,
+    "currency": "EUR",
+    "model": "annual_subscription or per_transaction or modular_pricing"
+  },
+  "evidence_requirements": [
+    {
+      "type": "close_reduction_case_study",
+      "description": "Case study showing days-to-close reduction in similar company size",
+      "weight": 0.25,
+      "required": true
+    },
+    {
+      "type": "erp_integration_proof",
+      "description": "Demonstrated integration with buyer's accounting/ERP system",
+      "weight": 0.25,
+      "required": true
+    },
+    {
+      "type": "compliance_certification",
+      "description": "SOC2, ISO 27001, or relevant financial compliance certifications",
+      "weight": 0.20,
+      "required": true
+    },
+    {
+      "type": "accuracy_metrics",
+      "description": "Transaction processing accuracy rates with audit trail proof",
+      "weight": 0.20,
+      "required": true
+    },
+    {
+      "type": "multi_entity_proof",
+      "description": "Proof of multi-entity/multi-currency handling if buyer needs it",
+      "weight": 0.10,
+      "required": false
+    }
+  ],
+  "red_flags_for_buyer": [
+    "Vendor cannot demonstrate integration with buyer's ERP",
+    "No audit trail or compliance logging built in",
+    "Requires complete process redesign before any automation",
+    "No handling of exceptions or edge cases (only happy path)",
+    "Vendor lacks financial compliance certifications (SOC2, etc.)",
+    "Cannot handle multi-entity or multi-currency if buyer needs it"
+  ],
+  "red_flags_for_vendor": [
+    "Buyer has no standardized chart of accounts",
+    "No executive sponsor in finance (automation champion needed)",
+    "Buyer's ERP is heavily customized with no standard APIs",
+    "Buyer expects 100% automation including judgement-heavy entries",
+    "Buyer's compliance requirements are unclear or contradictory"
+  ],
+  "vendor_capability_requirements": [
+    "ERP/accounting system connector",
+    "Invoice processing (capture, match, approve, post)",
+    "Bank reconciliation engine",
+    "Approval workflow with role-based routing",
+    "Exception handling and human review queue",
+    "Audit trail (every transaction traceable)",
+    "Reporting and analytics dashboard",
+    "Multi-entity and multi-currency support",
+    "Compliance framework alignment (SOX, IFRS, local GAAP)"
+  ],
+  "decision_questions": [
+    "How do you integrate with [our ERP/accounting system]?",
+    "What is your typical days-to-close improvement for companies our size?",
+    "How do you handle exceptions and edge cases requiring human judgement?",
+    "What compliance certifications do you hold?",
+    "Can we start with one module (e.g., AP) and expand to others?",
+    "How is the audit trail maintained and accessed?",
+    "Do you support multi-entity and multi-currency?",
+    "What does month-end close automation look like specifically?",
+    "How do you handle our bank format/connectivity?"
+  ],
+  "adjacent_categories": ["ai_document_processing", "procurement_workflow_automation", "compliance_document_review"],
+  "differentiation_from_adjacent": {
+    "vs_ai_document_processing": "Finance automation covers the full AP/AR/close workflow; document processing only extracts data from financial documents like invoices.",
+    "vs_procurement_workflow_automation": "Finance back-office covers post-purchase financial operations (AP, reconciliation, close); procurement covers pre-purchase (sourcing, PO, supplier management).",
+    "vs_compliance_document_review": "Finance automation handles transactional compliance (audit trail, controls); compliance review handles regulatory document analysis and policy checking."
+  }
+}

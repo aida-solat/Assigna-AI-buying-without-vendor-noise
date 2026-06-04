@@ -1,0 +1,69 @@
+{
+  "vendor_id": "flowmatic",
+  "vendor_name": "Flowmatic",
+  "description": "Low-code workflow orchestration platform connecting enterprise systems with AI-enhanced automation, visual builder, and advanced error handling.",
+  "website": "https://flowmatic.example.com",
+  "headquarters": "Amsterdam, Netherlands",
+  "founded_year": 2020,
+  "company_size": "11-50",
+  "categories": [
+    {
+      "category_id": "workflow_orchestration",
+      "strength": 0.85,
+      "evidence": [
+        {
+          "type": "integration_breadth",
+          "description": "Native connectors for SAP, Salesforce, Microsoft 365, Google Workspace, Slack, Jira, and 200+ systems via API",
+          "quality": 0.85,
+          "status": "verified"
+        },
+        {
+          "type": "similar_process_case_study",
+          "description": "Automated 12-step order-to-fulfillment process for logistics company, reduced cycle time from 4 days to 6 hours",
+          "quality": 0.82,
+          "status": "verified"
+        },
+        {
+          "type": "ease_of_change",
+          "description": "Visual drag-and-drop builder, business users modify 70% of workflows without engineering",
+          "quality": 0.78,
+          "status": "self_declared"
+        },
+        {
+          "type": "error_handling_demo",
+          "description": "Built-in retry logic, dead letter queues, Slack/email notifications on failure, auto-rollback",
+          "quality": 0.80,
+          "status": "verified"
+        }
+      ],
+      "integrations_supported": ["SAP", "Salesforce", "Microsoft 365", "Google Workspace", "Slack", "Jira", "ServiceNow", "HubSpot", "Custom REST API"],
+      "typical_timeline_weeks": 4,
+      "pricing_notes": "Per-workflow pricing starting €500/month or enterprise license €2K-€8K/month"
+    },
+    {
+      "category_id": "email_workflow_automation",
+      "strength": 0.65,
+      "evidence": [
+        {
+          "type": "email_platform_integration",
+          "description": "Microsoft 365 and Gmail native connectors for inbox monitoring and routing",
+          "quality": 0.75,
+          "status": "verified"
+        },
+        {
+          "type": "classification_accuracy",
+          "description": "AI classification module with 89% accuracy on email categorization out-of-box",
+          "quality": 0.70,
+          "status": "self_declared"
+        }
+      ],
+      "integrations_supported": ["Microsoft 365", "Gmail", "Outlook"],
+      "typical_timeline_weeks": 3,
+      "pricing_notes": "Included in workflow platform license"
+    }
+  ],
+  "languages_supported": ["en", "de", "fr", "nl", "es"],
+  "certifications": ["SOC2 Type I", "GDPR compliant"],
+  "deployment_model": ["cloud"],
+  "red_flags": ["No on-premise option — cloud only", "Relatively young company (2020)"]
+}

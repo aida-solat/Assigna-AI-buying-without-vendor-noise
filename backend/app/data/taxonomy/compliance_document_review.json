@@ -1,0 +1,166 @@
+{
+  "category_id": "compliance_document_review",
+  "category_name": "Compliance Document Review & Regulatory Analysis",
+  "category_type": "hybrid",
+  "parent_category": "Operations Automation",
+  "description": "AI-powered analysis of regulatory documents, contracts, policies, and compliance materials. Identifies risks, gaps, clause conflicts, regulatory requirements, and policy violations. Must be explainable and audit-grade — human-in-the-loop is mandatory, not optional.",
+  "buyer_problem_patterns": [
+    "We spend weeks reviewing contracts for compliance issues",
+    "Regulatory changes require manual review of all affected policies",
+    "We miss compliance gaps until audit time",
+    "Legal/compliance team is bottleneck for document approvals",
+    "We can't keep up with regulatory changes across jurisdictions",
+    "Contract risk assessment is inconsistent across reviewers"
+  ],
+  "diagnostic_triggers": {
+    "positive_signals": [
+      "Regulatory obligations explicitly mentioned",
+      "Contract volume requiring review is high (>50/month)",
+      "Compliance team backlog or bottleneck cited",
+      "Multi-jurisdiction complexity mentioned",
+      "Audit findings or compliance failures referenced",
+      "Regulatory change management is a pain point"
+    ],
+    "negative_signals": [
+      "Problem is about general document search (use Enterprise RAG)",
+      "Buyer needs generic OCR/extraction (use AI Document Processing)",
+      "Company has no regulatory obligations",
+      "Problem is about creating policies, not reviewing them"
+    ],
+    "minimum_thresholds": {
+      "documents_requiring_review_per_month": 20,
+      "has_regulatory_obligations": true,
+      "has_compliance_team_or_function": true
+    },
+    "disqualifiers": [
+      "Company has no regulatory obligations (no compliance need)",
+      "Problem is generic document processing without compliance context",
+      "Buyer expects AI to make final compliance decisions without human review",
+      "No legal/compliance function exists in the company",
+      "Document volume is too low to justify automation (<10/month)"
+    ]
+  },
+  "typical_use_cases": [
+    "Contract clause risk identification",
+    "Regulatory change impact analysis",
+    "Policy-to-regulation mapping and gap detection",
+    "Due diligence document review acceleration",
+    "Compliance checklist automation",
+    "Third-party risk document screening",
+    "Internal policy conflict detection",
+    "Audit preparation and evidence gathering"
+  ],
+  "not_for": [
+    "Companies without regulatory obligations (no compliance context needed)",
+    "Generic document processing needs (use AI Document Processing)",
+    "Companies expecting AI to replace legal judgement (human-in-loop is mandatory)",
+    "Companies looking for general knowledge search (use Enterprise RAG)",
+    "Very low document volume (<10 reviews/month)",
+    "Companies that need contract authoring/generation (this is review, not creation)"
+  ],
+  "required_buyer_inputs": [
+    "Types of documents reviewed (contracts, policies, regulatory filings)",
+    "Volume of documents per month/quarter",
+    "Regulatory frameworks applicable (GDPR, SOX, MiFID, HIPAA, ISO, etc.)",
+    "Current review process and time per document",
+    "Who reviews (legal, compliance, external counsel)",
+    "Specific risks or clauses of concern",
+    "Multi-jurisdiction requirements",
+    "Output needed (risk report, gap analysis, checklist, annotations)"
+  ],
+  "typical_integrations": ["Contract management systems (Ironclad, DocuSign CLM)", "SharePoint", "Document management (iManage, NetDocuments)", "GRC platforms (ServiceNow GRC, Archer)", "Legal tech stacks"],
+  "buyer_roles": ["General Counsel", "Head of Compliance", "Chief Risk Officer", "Legal Operations Manager", "VP Legal", "Data Protection Officer"],
+  "success_metrics": [
+    "Review time per document reduction (%)",
+    "Compliance gaps identified before audit (%)",
+    "False positive rate (flagged but not actual issue)",
+    "Reviewer consistency improvement",
+    "Time to respond to regulatory changes",
+    "Audit preparation time reduction",
+    "Risk identification rate vs manual review"
+  ],
+  "implementation_complexity": "high",
+  "typical_timeline_weeks": { "min": 10, "max": 24 },
+  "budget_band": {
+    "min": 30000,
+    "max": 250000,
+    "currency": "EUR",
+    "model": "annual_subscription or per_document or per_review_project"
+  },
+  "evidence_requirements": [
+    {
+      "type": "accuracy_on_regulatory_framework",
+      "description": "Demonstrated accuracy on buyer's specific regulatory framework (GDPR, SOX, etc.)",
+      "weight": 0.30,
+      "required": true
+    },
+    {
+      "type": "explainability_proof",
+      "description": "Every AI finding must be traceable to source clause/regulation with reasoning shown",
+      "weight": 0.25,
+      "required": true
+    },
+    {
+      "type": "false_positive_rate",
+      "description": "Documented false positive/negative rates from similar deployments",
+      "weight": 0.20,
+      "required": true
+    },
+    {
+      "type": "legal_industry_reference",
+      "description": "Reference customer in regulated industry with compliance team endorsement",
+      "weight": 0.15,
+      "required": false
+    },
+    {
+      "type": "security_certification",
+      "description": "SOC2, ISO 27001, or relevant security/privacy certifications for handling sensitive legal documents",
+      "weight": 0.10,
+      "required": true
+    }
+  ],
+  "red_flags_for_buyer": [
+    "Vendor claims AI can replace legal/compliance review entirely",
+    "No explainability — findings without source citations or reasoning",
+    "Vendor cannot handle buyer's specific regulatory framework",
+    "No human-in-the-loop workflow built into the product",
+    "Data security inadequate for sensitive legal documents",
+    "Vendor trained on generic data without legal/compliance specialization",
+    "No false positive/negative rate transparency"
+  ],
+  "red_flags_for_vendor": [
+    "Buyer expects AI to make final compliance decisions without human review",
+    "Buyer's documents are in unusual formats or languages not supported",
+    "No clear regulatory framework to review against (vague compliance goals)",
+    "Buyer has no compliance function to own and validate outputs",
+    "Buyer's risk tolerance is zero (any AI error unacceptable)"
+  ],
+  "vendor_capability_requirements": [
+    "Regulatory framework knowledge base (updateable)",
+    "Document parsing for legal/compliance documents",
+    "Clause-level annotation and risk flagging",
+    "Explainable AI (reasoning shown for every finding)",
+    "Human review workflow with approval/reject/override",
+    "Audit trail for all review decisions",
+    "Multi-jurisdiction regulatory coverage",
+    "Integration with GRC/CLM platforms",
+    "Regular model updates for regulatory changes"
+  ],
+  "decision_questions": [
+    "Which regulatory frameworks do you cover?",
+    "How do you explain AI findings — can reviewers see the reasoning?",
+    "What is your false positive rate on similar document types?",
+    "How do you handle regulatory updates and changes?",
+    "What does the human review workflow look like?",
+    "Where is our data stored and processed?",
+    "Can you handle [our specific document types and jurisdictions]?",
+    "How does your system learn from reviewer corrections?",
+    "What security certifications do you hold?"
+  ],
+  "adjacent_categories": ["ai_document_processing", "enterprise_knowledge_search", "finance_backoffice_automation"],
+  "differentiation_from_adjacent": {
+    "vs_ai_document_processing": "Compliance review applies legal/regulatory intelligence to documents; document processing only extracts data without compliance context.",
+    "vs_enterprise_knowledge_search": "Compliance review analyzes documents against regulatory requirements; RAG searches for answers across general knowledge bases.",
+    "vs_finance_backoffice_automation": "Compliance review handles regulatory document analysis; finance automation handles transactional financial operations."
+  }
+}

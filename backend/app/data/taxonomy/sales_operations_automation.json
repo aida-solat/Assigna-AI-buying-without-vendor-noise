@@ -1,0 +1,164 @@
+{
+  "category_id": "sales_operations_automation",
+  "category_name": "Sales Operations Automation",
+  "category_type": "product_category",
+  "parent_category": "Revenue Operations",
+  "description": "AI-powered automation of sales workflows including CRM automation, lead scoring, pipeline management, proposal generation, meeting scheduling, and sales analytics. Revenue-focused with short feedback loops — optimizes for conversion, not just efficiency.",
+  "buyer_problem_patterns": [
+    "Sales reps spend more time on admin than selling",
+    "CRM data is incomplete or outdated because reps don't update it",
+    "We can't prioritize leads effectively — everything looks the same",
+    "Proposal/quote creation is manual and slow",
+    "Pipeline visibility is poor — forecasting is guesswork",
+    "Follow-up timing is inconsistent and opportunities slip"
+  ],
+  "diagnostic_triggers": {
+    "positive_signals": [
+      "CRM already in use but underutilized",
+      "Sales team size >5 reps",
+      "Lead volume mentioned with poor conversion",
+      "Admin time quantified as pain (>30% of rep time)",
+      "Revenue goals missed due to process issues"
+    ],
+    "negative_signals": [
+      "No CRM and no interest in getting one",
+      "Sales process is purely relationship/referral (no pipeline)",
+      "Problem is about customer support (not sales)",
+      "Buyer needs marketing automation (not sales ops)"
+    ],
+    "minimum_thresholds": {
+      "sales_team_size": 3,
+      "monthly_leads_or_opportunities": 50,
+      "has_crm": true
+    },
+    "disqualifiers": [
+      "No CRM in place and no willingness to adopt one",
+      "Sales team of 1-2 (manual works fine at this scale)",
+      "No repeatable sales process exists (need sales consulting first)",
+      "Buyer conflates this with marketing automation or demand gen",
+      "Product is pre-market (no established sales motion yet)"
+    ]
+  },
+  "typical_use_cases": [
+    "Automatic CRM data entry and enrichment",
+    "AI lead scoring and prioritization",
+    "Pipeline management and forecast automation",
+    "Proposal/quote generation automation",
+    "Meeting scheduling and follow-up automation",
+    "Deal risk scoring and next-best-action suggestions",
+    "Sales activity logging and coaching insights",
+    "Territory and account assignment optimization"
+  ],
+  "not_for": [
+    "Companies without a CRM (need foundation before automation)",
+    "Sales teams of 1-2 (overhead not justified)",
+    "Companies without repeatable sales process (need sales consulting first)",
+    "Marketing automation needs (demand gen, campaigns, nurturing)",
+    "Customer support automation (post-sale, not sales process)",
+    "Pre-product startups without established sales motion"
+  ],
+  "required_buyer_inputs": [
+    "Current CRM system",
+    "Sales team size and structure",
+    "Monthly lead/opportunity volume",
+    "Current sales process (stages, handoffs)",
+    "Biggest time sinks for reps",
+    "Win rate and conversion metrics",
+    "Existing tools in sales stack (outreach, scheduling, etc.)",
+    "Average deal size and cycle length"
+  ],
+  "typical_integrations": ["Salesforce", "HubSpot", "Pipedrive", "Microsoft Dynamics CRM", "Outreach", "Salesloft", "Calendly", "Gong", "LinkedIn Sales Navigator", "Slack"],
+  "buyer_roles": ["VP Sales", "Head of Revenue Operations", "CRO", "Sales Director", "RevOps Manager"],
+  "success_metrics": [
+    "Rep selling time increase (%)",
+    "CRM data completeness improvement (%)",
+    "Lead-to-opportunity conversion rate change",
+    "Average deal cycle time reduction",
+    "Forecast accuracy improvement",
+    "Proposal generation time reduction",
+    "Pipeline coverage improvement",
+    "Revenue per rep improvement"
+  ],
+  "implementation_complexity": "low-medium",
+  "typical_timeline_weeks": { "min": 2, "max": 8 },
+  "budget_band": {
+    "min": 10000,
+    "max": 150000,
+    "currency": "EUR",
+    "model": "per_user_per_month or annual_subscription"
+  },
+  "evidence_requirements": [
+    {
+      "type": "conversion_improvement",
+      "description": "Case study showing measurable conversion rate or win rate improvement",
+      "weight": 0.30,
+      "required": true
+    },
+    {
+      "type": "crm_integration",
+      "description": "Native integration with buyer's CRM (not just generic API)",
+      "weight": 0.25,
+      "required": true
+    },
+    {
+      "type": "time_savings_proof",
+      "description": "Documented rep time savings (hours/week freed from admin)",
+      "weight": 0.20,
+      "required": true
+    },
+    {
+      "type": "data_quality_impact",
+      "description": "Proof of CRM data completeness improvement after deployment",
+      "weight": 0.15,
+      "required": false
+    },
+    {
+      "type": "similar_team_size_reference",
+      "description": "Reference from team of similar size and deal complexity",
+      "weight": 0.10,
+      "required": false
+    }
+  ],
+  "red_flags_for_buyer": [
+    "Vendor doesn't integrate natively with buyer's CRM",
+    "Heavy setup required with no immediate value (6+ month ROI)",
+    "Requires reps to change entire workflow (adoption risk)",
+    "Lead scoring model is opaque with no explanation",
+    "Vendor focused on volume outbound (spray and pray) not quality",
+    "No analytics showing actual revenue impact"
+  ],
+  "red_flags_for_vendor": [
+    "Buyer has no CRM or refuses to adopt one",
+    "No repeatable sales process (different every deal)",
+    "Sales team resistant to any technology change",
+    "Buyer expects tool to fix a people/process problem",
+    "Very low lead volume (not enough data for AI scoring)"
+  ],
+  "vendor_capability_requirements": [
+    "CRM native integration (read + write)",
+    "AI lead/deal scoring with explainable reasoning",
+    "Activity capture and automatic logging",
+    "Pipeline analytics and forecasting",
+    "Workflow automation (follow-ups, tasks, notifications)",
+    "Proposal/quote generation or templates",
+    "Reporting dashboard",
+    "Low friction for rep adoption (minimal behavior change)"
+  ],
+  "decision_questions": [
+    "How do you integrate with [our CRM]?",
+    "How does your lead scoring work and can reps see why?",
+    "What is the typical adoption rate among sales reps?",
+    "How much admin time does this realistically save per rep per week?",
+    "What data do you need from us to start showing value?",
+    "How long before we see measurable impact on conversion?",
+    "Can reps override or adjust AI suggestions?",
+    "What does onboarding look like for a team of [our size]?",
+    "What analytics show actual revenue impact, not just activity metrics?"
+  ],
+  "adjacent_categories": ["workflow_orchestration", "customer_support_automation", "email_workflow_automation"],
+  "differentiation_from_adjacent": {
+    "vs_workflow_orchestration": "Sales ops understands pipeline, leads, deals, and revenue context; workflow orchestration is generic task routing without sales semantics.",
+    "vs_customer_support_automation": "Sales ops is pre-sale (pipeline, conversion); customer support is post-sale (tickets, retention).",
+    "vs_email_workflow_automation": "Sales ops automates the full sales workflow; email automation handles inbox triage as one component."
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "category_id": "custom_ai_consulting",
+  "category_name": "Custom AI Agent / AI Automation Consulting",
+  "category_type": "service_delivery_model",
+  "parent_category": "Custom Solutions",
+  "description": "Bespoke AI solutions built by agencies, consultants, or system integrators. For problems that no off-the-shelf product solves — multi-agent systems, custom integrations, AI strategy, unique workflows. Delivery model is project/retainer, not SaaS subscription. Requires buyer to have internal product owner and clear process understanding.",
+  "buyer_problem_patterns": [
+    "We have a unique process that no standard product covers",
+    "We tried off-the-shelf solutions and they don't fit our workflow",
+    "We need AI integrated deeply into our proprietary systems",
+    "We need a multi-step AI workflow that combines several capabilities",
+    "We want to build competitive advantage through proprietary AI",
+    "Our industry/domain is too specialized for generic tools"
+  ],
+  "diagnostic_triggers": {
+    "positive_signals": [
+      "Buyer has tried and rejected off-the-shelf solutions with specific reasons",
+      "Process is genuinely unique or proprietary",
+      "Internal technical counterpart available",
+      "Budget allows for custom development (>50K EUR)",
+      "Clear process documentation exists",
+      "Competitive advantage from AI is strategic goal"
+    ],
+    "negative_signals": [
+      "Buyer hasn't explored off-the-shelf options yet",
+      "Problem is standard (document processing, support, etc.)",
+      "No internal technical counterpart or product owner",
+      "Budget expects SaaS pricing for custom work",
+      "Process is undefined (need consulting before building)"
+    ],
+    "minimum_thresholds": {
+      "budget_eur": 50000,
+      "has_technical_counterpart": true,
+      "has_process_documentation": true
+    },
+    "disqualifiers": [
+      "Standard problem that off-the-shelf products solve (check other categories first)",
+      "Budget below 40K EUR (not viable for quality custom work)",
+      "No internal product owner or technical counterpart to collaborate with",
+      "Process is undefined — buyer says 'we want AI' without knowing for what",
+      "Buyer expects SaaS-like pricing/timeline for custom development",
+      "No willingness to invest in ongoing maintenance after initial build"
+    ]
+  },
+  "typical_use_cases": [
+    "Multi-agent AI systems for complex workflows",
+    "Proprietary AI integrated into buyer's core product",
+    "Industry-specific AI that no generic vendor covers",
+    "AI strategy consulting + implementation",
+    "Custom RAG/LLM deployment on proprietary data",
+    "Legacy system AI augmentation (no API, needs custom integration)",
+    "AI proof-of-concept / prototyping for strategic initiatives",
+    "Complex data pipeline + AI inference architecture"
+  ],
+  "not_for": [
+    "Companies with standard problems solved by existing products (always check categories 1-9 first)",
+    "Companies without technical counterpart or internal product ownership",
+    "Companies expecting SaaS pricing for custom development",
+    "Companies with unclear processes (need process consulting first, not AI building)",
+    "Companies unwilling to invest in ongoing maintenance/iteration",
+    "Companies wanting 'AI' without a specific use case or business outcome",
+    "Low-budget projects (<40K EUR) — quality custom AI requires investment"
+  ],
+  "required_buyer_inputs": [
+    "Specific problem description and why off-the-shelf doesn't work",
+    "Current process documentation",
+    "Technical environment (systems, languages, infrastructure)",
+    "Internal team available for collaboration (who is product owner?)",
+    "Budget range and timeline expectations",
+    "Success criteria (what does 'done' look like?)",
+    "Data availability and sensitivity",
+    "Ongoing maintenance expectations and budget",
+    "Previous AI/automation attempts and why they failed"
+  ],
+  "typical_integrations": ["Buyer's proprietary systems", "Custom APIs", "Cloud platforms (AWS, GCP, Azure)", "On-premise infrastructure", "Legacy systems", "Internal databases"],
+  "buyer_roles": ["CTO", "VP Engineering", "Head of Product", "Chief Digital Officer", "Innovation Lead", "CEO (in smaller companies)"],
+  "success_metrics": [
+    "Specific business KPI improvement tied to use case",
+    "Project delivered on time and within scope",
+    "System reliability and uptime post-deployment",
+    "Internal team ability to maintain/extend without vendor",
+    "User adoption of the custom system",
+    "ROI realized within expected timeline",
+    "Knowledge transfer completeness"
+  ],
+  "implementation_complexity": "high",
+  "typical_timeline_weeks": { "min": 8, "max": 40 },
+  "budget_band": {
+    "min": 50000,
+    "max": 500000,
+    "currency": "EUR",
+    "model": "project_based or retainer or time_and_materials"
+  },
+  "evidence_requirements": [
+    {
+      "type": "relevant_portfolio",
+      "description": "Portfolio of similar custom projects with outcomes documented",
+      "weight": 0.30,
+      "required": true
+    },
+    {
+      "type": "technical_depth_proof",
+      "description": "Demonstrated deep expertise in buyer's required technology stack",
+      "weight": 0.25,
+      "required": true
+    },
+    {
+      "type": "client_reference",
+      "description": "Referenceable client from similar project scope/complexity",
+      "weight": 0.20,
+      "required": true
+    },
+    {
+      "type": "delivery_methodology",
+      "description": "Clear project delivery methodology with milestones, checkpoints, and risk management",
+      "weight": 0.15,
+      "required": true
+    },
+    {
+      "type": "knowledge_transfer_plan",
+      "description": "Explicit plan for handoff to buyer's internal team post-project",
+      "weight": 0.10,
+      "required": false
+    }
+  ],
+  "red_flags_for_buyer": [
+    "Vendor has no portfolio of similar work",
+    "No clear methodology or milestone structure proposed",
+    "Vendor avoids fixed scope and only offers time-and-materials",
+    "No knowledge transfer plan — creates permanent vendor dependency",
+    "Team presented in proposal is different from team that actually delivers",
+    "Vendor promises unrealistic timelines for complex work",
+    "No maintenance/support plan for post-deployment",
+    "Vendor cannot explain technical approach in buyer's terms"
+  ],
+  "red_flags_for_vendor": [
+    "Buyer has no internal product owner or technical counterpart",
+    "Buyer cannot articulate what 'success' looks like",
+    "Buyer expects SaaS pricing and timeline for custom work",
+    "Process is undefined — 'just build us something with AI'",
+    "Buyer has unrealistic expectations about AI capabilities",
+    "No data available for the proposed AI use case",
+    "Buyer unwilling to commit time for collaboration/feedback",
+    "Scope keeps expanding without budget discussion"
+  ],
+  "vendor_capability_requirements": [
+    "Deep technical expertise in relevant AI/ML domain",
+    "Experience with buyer's infrastructure/systems",
+    "Project delivery methodology (agile/structured hybrid)",
+    "Clear communication and expectation management",
+    "Knowledge transfer and documentation capability",
+    "Post-delivery support and maintenance option",
+    "Security-aware development practices",
+    "Ability to start with POC before full commitment"
+  ],
+  "decision_questions": [
+    "Can you show me 2-3 similar projects you've delivered?",
+    "Who exactly will be on the team delivering our project?",
+    "What is your project methodology — how do we track progress?",
+    "What happens if the project needs to change scope mid-way?",
+    "What does knowledge transfer look like — can we maintain this ourselves?",
+    "What is your approach to AI safety and testing?",
+    "Can we start with a paid POC before committing to full project?",
+    "What does post-delivery support look like?",
+    "How do you handle data privacy and security during development?",
+    "What happens if the AI doesn't perform as expected?"
+  ],
+  "adjacent_categories": ["enterprise_knowledge_search", "workflow_orchestration", "all_product_categories"],
+  "differentiation_from_adjacent": {
+    "vs_all_product_categories": "Custom consulting is for problems NO off-the-shelf product solves. Always check categories 1-9 first. Custom is last resort, not first choice.",
+    "vs_workflow_orchestration": "Workflow orchestration uses existing platforms; custom consulting builds from scratch when platforms can't handle the requirement.",
+    "vs_enterprise_knowledge_search": "RAG products are increasingly off-the-shelf; custom consulting builds bespoke solutions only when unique requirements (data, security, integration) prevent using a product."
+  }
+}

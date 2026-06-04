@@ -1,0 +1,54 @@
+{
+  "vendor_id": "supportwise",
+  "vendor_name": "SupportWise",
+  "description": "AI-powered customer support automation platform with multi-channel coverage, intelligent routing, and agent-assist. Specializes in mid-market SaaS and e-commerce.",
+  "website": "https://supportwise.example.com",
+  "headquarters": "Berlin, Germany",
+  "founded_year": 2018,
+  "company_size": "51-200",
+  "categories": [
+    {
+      "category_id": "customer_support_automation",
+      "strength": 0.88,
+      "evidence": [
+        {
+          "type": "auto_resolution_rate",
+          "description": "Average 62% auto-resolution across SaaS clients, 45% for e-commerce (measured over 6 months)",
+          "quality": 0.85,
+          "status": "verified"
+        },
+        {
+          "type": "csat_preservation",
+          "description": "CSAT maintained at 4.3/5 average post-deployment (vs 4.1 pre-deployment) across 20 clients",
+          "quality": 0.82,
+          "status": "verified"
+        },
+        {
+          "type": "helpdesk_integration",
+          "description": "Native Zendesk, Intercom, and Freshdesk connectors. Salesforce Service Cloud via API.",
+          "quality": 0.88,
+          "status": "verified"
+        },
+        {
+          "type": "escalation_handling",
+          "description": "Full context handoff with conversation summary, sentiment score, and suggested resolution",
+          "quality": 0.80,
+          "status": "verified"
+        },
+        {
+          "type": "multi_language",
+          "description": "Supports 8 languages for auto-responses with native quality in DE, EN, FR, ES",
+          "quality": 0.75,
+          "status": "self_declared"
+        }
+      ],
+      "integrations_supported": ["Zendesk", "Intercom", "Freshdesk", "Salesforce Service Cloud", "HubSpot", "Slack"],
+      "typical_timeline_weeks": 4,
+      "pricing_notes": "Per-agent seat €80-€150/month or per-resolution €1.50-€3.00"
+    }
+  ],
+  "languages_supported": ["de", "en", "fr", "es", "nl", "it", "pt", "pl"],
+  "certifications": ["SOC2 Type II", "GDPR compliant", "ISO 27001"],
+  "deployment_model": ["cloud"],
+  "red_flags": ["Weaker on phone/voice channel — primarily chat and email", "Requires minimum 500 tickets/month for meaningful AI training"]
+}

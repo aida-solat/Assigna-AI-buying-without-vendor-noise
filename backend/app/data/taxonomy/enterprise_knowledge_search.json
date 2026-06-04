@@ -1,0 +1,160 @@
+{
+  "category_id": "enterprise_knowledge_search",
+  "category_name": "Internal Knowledge Search / Enterprise RAG",
+  "category_type": "product_category",
+  "parent_category": "Knowledge Management",
+  "description": "AI-powered search across internal documents, wikis, databases, and knowledge bases using retrieval-augmented generation (RAG). Answers employee questions from company data with source citations, replacing manual search across fragmented systems.",
+  "buyer_problem_patterns": [
+    "Our employees waste time searching for information across multiple systems",
+    "Institutional knowledge is lost when people leave",
+    "Our internal wiki/docs are outdated and hard to navigate",
+    "New employees take months to find relevant internal information",
+    "We answer the same internal questions repeatedly",
+    "Information is scattered across SharePoint, Confluence, Drive, and email"
+  ],
+  "diagnostic_triggers": {
+    "positive_signals": [
+      "Multiple knowledge sources mentioned (wiki, drive, sharepoint)",
+      "Onboarding pain explicitly cited",
+      "Employee time wasted on search quantified",
+      "Knowledge loss from turnover mentioned",
+      "Repeated internal questions identified"
+    ],
+    "negative_signals": [
+      "Problem is customer-facing (not internal)",
+      "Company has very little documented knowledge",
+      "Problem is about creating knowledge, not finding it",
+      "Need is for real-time operational data, not documents"
+    ],
+    "minimum_thresholds": {
+      "document_count": 100,
+      "employee_count": 30
+    },
+    "disqualifiers": [
+      "Fewer than 100 internal documents (not enough to justify RAG)",
+      "Company has no documentation culture (AI can't search what doesn't exist)",
+      "Need is customer-facing chatbot (use Customer Support Automation instead)",
+      "Requirement for legally binding answers (RAG has hallucination risk)",
+      "Need for real-time data from live systems (RAG is document-based)"
+    ]
+  },
+  "typical_use_cases": [
+    "Employee Q&A from internal knowledge base",
+    "Policy/procedure lookup",
+    "Technical documentation search for engineering teams",
+    "Onboarding knowledge assistant for new hires",
+    "Cross-system information retrieval (single search across all sources)",
+    "Meeting notes and decision history search",
+    "Regulatory/compliance information lookup"
+  ],
+  "not_for": [
+    "Companies with very little documented knowledge (<100 documents)",
+    "Companies needing customer-facing chatbot (that's Customer Support Automation)",
+    "Companies without internal documentation culture or willingness to build one",
+    "Highly regulated environments where AI answers must be legally binding",
+    "Companies needing real-time operational data (this is document-based, not live-data)",
+    "Small teams where asking a colleague is faster than searching"
+  ],
+  "required_buyer_inputs": [
+    "Knowledge sources (Confluence, SharePoint, Google Drive, Notion, etc.)",
+    "Approximate volume of documents",
+    "Number of employees who would use the system",
+    "Current search tools and their specific limitations",
+    "Security/access control requirements (who can see what?)",
+    "Languages of internal content",
+    "Most common questions employees currently ask"
+  ],
+  "typical_integrations": ["SharePoint", "Confluence", "Google Drive", "Notion", "Slack", "Microsoft Teams", "Internal wikis", "File servers", "Jira", "GitHub/GitLab"],
+  "buyer_roles": ["CTO", "Head of IT", "Head of HR", "Head of Operations", "Knowledge Manager", "VP Engineering", "Chief of Staff"],
+  "success_metrics": [
+    "Time to find information (before vs after)",
+    "Internal support ticket reduction",
+    "Employee satisfaction with knowledge access (survey)",
+    "Onboarding time reduction",
+    "Answer accuracy rate",
+    "Adoption rate (% employees using regularly)",
+    "Reduction in repeated questions to subject matter experts"
+  ],
+  "implementation_complexity": "medium-high",
+  "typical_timeline_weeks": { "min": 6, "max": 16 },
+  "budget_band": {
+    "min": 20000,
+    "max": 300000,
+    "currency": "EUR",
+    "model": "per_user or per_document_volume or annual_subscription"
+  },
+  "evidence_requirements": [
+    {
+      "type": "accuracy_benchmark",
+      "description": "Documented answer accuracy on similar knowledge bases with hallucination rate disclosed",
+      "weight": 0.25,
+      "required": true
+    },
+    {
+      "type": "connector_proof",
+      "description": "Demonstrated integration with buyer's specific document systems",
+      "weight": 0.25,
+      "required": true
+    },
+    {
+      "type": "access_control_demo",
+      "description": "Security/access control demonstration showing permission-aware retrieval",
+      "weight": 0.20,
+      "required": true
+    },
+    {
+      "type": "source_citation",
+      "description": "Proof that answers include verifiable source citations",
+      "weight": 0.15,
+      "required": true
+    },
+    {
+      "type": "adoption_case_study",
+      "description": "Case study showing employee adoption rates and satisfaction improvement",
+      "weight": 0.15,
+      "required": false
+    }
+  ],
+  "red_flags_for_buyer": [
+    "No source citation in answers (answers appear without showing where info came from)",
+    "No access control (all users see all documents regardless of permissions)",
+    "Vendor doesn't address hallucination risk explicitly",
+    "No support for buyer's specific document platforms",
+    "Requires all documents in single format or single system",
+    "No incremental indexing (can't handle new/updated documents)"
+  ],
+  "red_flags_for_vendor": [
+    "Buyer has no structured documentation worth indexing",
+    "Buyer expects AI to create knowledge that doesn't exist in documents",
+    "No IT support for connector setup or API access",
+    "Security requirements that prevent any cloud processing (and buyer won't self-host)",
+    "Buyer conflates this with decision-making AI or process automation"
+  ],
+  "vendor_capability_requirements": [
+    "Document connectors (multi-source, minimum: SharePoint OR Confluence OR Drive)",
+    "RAG pipeline (embedding + retrieval + generation)",
+    "Source citation in every answer",
+    "Access control / permission-aware retrieval",
+    "Incremental indexing (new docs auto-indexed without full re-index)",
+    "Multi-language support",
+    "Hallucination detection or confidence scoring",
+    "Admin dashboard for monitoring usage and quality"
+  ],
+  "decision_questions": [
+    "How do you handle access controls from our source systems?",
+    "What is your approach to preventing hallucinated answers?",
+    "Do all answers include clickable source citations?",
+    "How are new or updated documents added to the index?",
+    "What document formats and systems do you support?",
+    "How do you handle outdated or conflicting information across sources?",
+    "What is typical answer accuracy on first deployment?",
+    "What does the admin dashboard show about usage and quality?",
+    "Can users give feedback on answer quality (thumbs up/down)?"
+  ],
+  "adjacent_categories": ["customer_support_automation", "compliance_document_review"],
+  "differentiation_from_adjacent": {
+    "vs_customer_support_automation": "Enterprise RAG is internal-facing for employees; customer support automation is external-facing for customers.",
+    "vs_compliance_document_review": "RAG provides broad knowledge search across all topics; compliance review is narrowly focused on regulatory document analysis.",
+    "vs_custom_ai_consulting": "RAG products are increasingly off-the-shelf; custom AI consulting builds bespoke solutions for unique needs."
+  }
+}

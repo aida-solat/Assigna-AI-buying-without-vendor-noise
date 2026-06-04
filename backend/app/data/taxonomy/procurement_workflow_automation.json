@@ -1,0 +1,160 @@
+{
+  "category_id": "procurement_workflow_automation",
+  "category_name": "Procurement & Supplier Workflow Automation",
+  "category_type": "hybrid",
+  "parent_category": "Operations Automation",
+  "description": "AI-powered automation of procurement workflows including supplier management, purchase order processing, spend analysis, supplier risk scoring, vendor evaluation, and approval routing. Ranges from focused tools (spend analytics) to comprehensive platforms (full source-to-pay).",
+  "buyer_problem_patterns": [
+    "Our procurement process is mostly manual spreadsheets and emails",
+    "We have poor visibility into supplier performance and risk",
+    "Maverick spending is a problem — people buy outside approved channels",
+    "Supplier onboarding takes too long",
+    "We can't effectively compare suppliers or track total costs",
+    "Approval processes are slow and paper-based"
+  ],
+  "diagnostic_triggers": {
+    "positive_signals": [
+      "Multiple suppliers mentioned (>10 active)",
+      "Spend visibility or cost control cited as pain",
+      "Supplier risk or compliance mentioned",
+      "Manual approval workflows described",
+      "Procurement team or budget authority exists"
+    ],
+    "negative_signals": [
+      "Problem is only about invoice data extraction (use AI Document Processing)",
+      "Company has <10 suppliers (too simple for automation)",
+      "Problem is strategic sourcing consulting (not tool)",
+      "Buyer wants full ERP replacement (this augments ERP)"
+    ],
+    "minimum_thresholds": {
+      "active_suppliers": 10,
+      "annual_procurement_spend_eur": 500000
+    },
+    "disqualifiers": [
+      "Fewer than 10 active suppliers (process too simple)",
+      "No procurement budget authority (no one to champion it)",
+      "Company needs full ERP replacement (this augments, not replaces)",
+      "Buyer looking for strategic sourcing consulting only (this is tool, not advisory)",
+      "Annual procurement spend below 200K EUR (ROI unlikely)"
+    ]
+  },
+  "typical_use_cases": [
+    "Automated PO creation and three-way matching",
+    "Supplier risk scoring and continuous monitoring",
+    "Spend analytics and cost optimization recommendations",
+    "Supplier onboarding workflow automation",
+    "Contract compliance monitoring and alerting",
+    "Approval workflow automation (routing, escalation)",
+    "Vendor performance scorecards"
+  ],
+  "not_for": [
+    "Companies with <10 active suppliers (too simple to justify)",
+    "Companies that need full ERP replacement (this augments ERP, not replaces it)",
+    "Companies looking for strategic sourcing consulting only (this is tool, not advisory)",
+    "Companies without procurement budget authority or executive sponsor",
+    "Direct-to-consumer companies without B2B procurement needs",
+    "Companies whose procurement is purely commodity/spot-buy with no repeat suppliers"
+  ],
+  "required_buyer_inputs": [
+    "Number of active suppliers",
+    "Annual procurement spend",
+    "Current procurement tools/process description",
+    "Main pain points (cost, risk, speed, compliance, visibility)",
+    "ERP/finance system in use",
+    "Regulatory or audit requirements",
+    "Current approval process and bottlenecks"
+  ],
+  "typical_integrations": ["SAP Ariba", "SAP S/4HANA", "Oracle Procurement", "Microsoft Dynamics", "NetSuite", "Coupa", "Excel/CSV", "Email"],
+  "buyer_roles": ["CPO", "Head of Procurement", "CFO", "COO", "Supply Chain Director", "Procurement Manager"],
+  "success_metrics": [
+    "Procurement cycle time reduction",
+    "Cost savings identified and realized (%)",
+    "Supplier risk incidents prevented",
+    "Maverick spend reduction (%)",
+    "Supplier onboarding time reduction",
+    "Process compliance rate (%)",
+    "PO accuracy / exception rate"
+  ],
+  "implementation_complexity": "medium-high",
+  "typical_timeline_weeks": { "min": 8, "max": 20 },
+  "budget_band": {
+    "min": 30000,
+    "max": 500000,
+    "currency": "EUR",
+    "model": "annual_subscription or per_supplier or per_transaction"
+  },
+  "evidence_requirements": [
+    {
+      "type": "roi_case_study",
+      "description": "ROI case study in similar industry/company size with quantified savings",
+      "weight": 0.30,
+      "required": true
+    },
+    {
+      "type": "erp_integration_proof",
+      "description": "Demonstrated integration with buyer's ERP system",
+      "weight": 0.25,
+      "required": true
+    },
+    {
+      "type": "compliance_audit_trail",
+      "description": "Compliance/audit trail capabilities demonstrated",
+      "weight": 0.20,
+      "required": true
+    },
+    {
+      "type": "risk_model_explanation",
+      "description": "Transparent explanation of how supplier risk scoring works",
+      "weight": 0.15,
+      "required": false
+    },
+    {
+      "type": "implementation_reference",
+      "description": "Reference from similar-sized implementation with timeline data",
+      "weight": 0.10,
+      "required": false
+    }
+  ],
+  "red_flags_for_buyer": [
+    "Vendor cannot explain how risk scoring algorithm works",
+    "No integration with buyer's ERP (requires manual data transfer)",
+    "Requires complete process re-engineering before deployment can start",
+    "No audit trail or compliance reporting capabilities",
+    "Hidden costs for implementation, data migration, or customization",
+    "Vendor only sells full platform when buyer needs one module"
+  ],
+  "red_flags_for_vendor": [
+    "Buyer has no standardized procurement process at all (chaos)",
+    "Buyer expects tool to replace strategic procurement thinking/decisions",
+    "No executive sponsor or change management commitment",
+    "Legacy systems with no API access or export capability",
+    "Buyer wants to start with all modules simultaneously (implementation risk)"
+  ],
+  "vendor_capability_requirements": [
+    "ERP integration (at least buyer's primary system)",
+    "Supplier database management",
+    "Workflow engine (approvals, routing, escalation)",
+    "Analytics/reporting dashboard with spend visibility",
+    "Risk scoring model (preferably explainable)",
+    "Document management (contracts, POs, invoices)",
+    "Audit trail and compliance logging",
+    "Modular deployment (start small, expand)"
+  ],
+  "decision_questions": [
+    "How do you integrate with [our ERP system]?",
+    "How is supplier risk calculated and how transparent is it?",
+    "What does implementation look like for a company our size?",
+    "Can we start with one module (e.g., spend analytics) and expand later?",
+    "How do you handle our compliance/audit requirements?",
+    "What change management support do you provide?",
+    "What is typical ROI timeline for companies our size?",
+    "How do you handle our specific industry's procurement regulations?",
+    "What does the approval workflow configuration look like?"
+  ],
+  "adjacent_categories": ["ai_document_processing", "finance_backoffice_automation", "workflow_orchestration"],
+  "differentiation_from_adjacent": {
+    "vs_ai_document_processing": "Procurement automation is the full workflow; document processing is just the data extraction component within it.",
+    "vs_finance_backoffice_automation": "Procurement is buying-side (vendor management, POs, sourcing); finance back-office is broader (AP/AR, reconciliation, close, expenses).",
+    "vs_workflow_orchestration": "Procurement automation is domain-specific with procurement logic built in; workflow orchestration is generic task routing without procurement semantics."
+  }
+}

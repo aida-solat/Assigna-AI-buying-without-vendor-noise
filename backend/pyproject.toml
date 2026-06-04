@@ -1,0 +1,27 @@
+[project]
+name = "assigna"
+version = "0.2.0"
+description = "Assigna — B2B Solution Assignment Engine with evidence-scored vendor matching"
+authors = [{ name = "Deciwa" }]
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.5.0",
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.27.0",
+    "httpx>=0.26.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "pytest-asyncio>=0.23.0",
+    "ruff>=0.1.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

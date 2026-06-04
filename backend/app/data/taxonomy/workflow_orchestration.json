@@ -1,0 +1,166 @@
+{
+  "category_id": "workflow_orchestration",
+  "category_name": "Workflow Orchestration & Process Automation",
+  "category_type": "product_category",
+  "parent_category": "Operations Automation",
+  "description": "Generic cross-system task routing, approval workflows, and process automation combining RPA, API integration, and AI. Not domain-specific — connects existing systems and automates multi-step processes that span multiple tools and teams.",
+  "buyer_problem_patterns": [
+    "We have manual handoffs between systems that cause delays",
+    "Approval processes are slow with no visibility into status",
+    "Our teams use different tools that don't talk to each other",
+    "Repetitive multi-step processes are done manually",
+    "We lose track of tasks between departments",
+    "Data is entered into multiple systems manually"
+  ],
+  "diagnostic_triggers": {
+    "positive_signals": [
+      "Multi-system/multi-tool environment described",
+      "Manual handoffs or copy-paste between systems",
+      "Approval bottlenecks with multiple stakeholders",
+      "Process spans multiple departments",
+      "Buyer mentions specific systems that need connecting",
+      "Repetitive multi-step process explicitly described"
+    ],
+    "negative_signals": [
+      "Problem is domain-specific (procurement, finance, support — use those categories)",
+      "Single-system problem (just needs configuration, not orchestration)",
+      "Buyer needs data extraction from documents (use AI Document Processing)",
+      "Problem is about replacing a system, not connecting systems"
+    ],
+    "minimum_thresholds": {
+      "systems_to_connect": 2,
+      "process_steps": 3,
+      "process_frequency_per_week": 10
+    },
+    "disqualifiers": [
+      "Problem is entirely within one system (configure that system instead)",
+      "Process runs fewer than 10 times per week (manual is still efficient)",
+      "Buyer needs domain-specific intelligence (use domain category instead)",
+      "No API access to any of the systems involved",
+      "Process is undefined (no one knows the steps — need process consulting first)"
+    ]
+  },
+  "typical_use_cases": [
+    "Cross-system approval workflows (request to review to approve to action)",
+    "Employee onboarding across HR, IT, facilities systems",
+    "Order-to-fulfillment process automation",
+    "Data synchronization between systems",
+    "Notification and escalation automation",
+    "Report generation from multiple data sources",
+    "RPA + AI hybrid for semi-structured tasks",
+    "Exception handling and routing"
+  ],
+  "not_for": [
+    "Companies needing domain-specific intelligence (use domain category: procurement, finance, support, etc.)",
+    "Single-system problems (just configure/customize that system)",
+    "Process runs fewer than 10 times per week (ROI too low)",
+    "Buyer has no API access to their existing systems",
+    "Process is undefined — need process mapping/consulting before automation",
+    "Companies looking to replace existing systems (this connects them, not replaces)"
+  ],
+  "required_buyer_inputs": [
+    "Systems currently used (list all involved tools)",
+    "Process to automate (step-by-step description)",
+    "Volume (how often does this process run?)",
+    "Current pain points (delays, errors, visibility)",
+    "Who is involved at each step (roles/departments)",
+    "API availability for existing systems",
+    "Exception handling requirements",
+    "Compliance/audit trail needs"
+  ],
+  "typical_integrations": ["Any system with API/webhook", "Salesforce", "SAP", "Microsoft 365", "Google Workspace", "Slack", "Jira", "ServiceNow", "HubSpot", "Custom databases"],
+  "buyer_roles": ["COO", "Head of Operations", "Head of IT", "Process Owner", "VP Digital Transformation", "CTO"],
+  "success_metrics": [
+    "Process cycle time reduction (%)",
+    "Manual steps eliminated (count)",
+    "Error rate reduction from manual handoffs",
+    "Visibility improvement (can track process status?)",
+    "Time saved per process run",
+    "Exception handling time reduction",
+    "Employee satisfaction with process"
+  ],
+  "implementation_complexity": "medium",
+  "typical_timeline_weeks": { "min": 3, "max": 12 },
+  "budget_band": {
+    "min": 15000,
+    "max": 200000,
+    "currency": "EUR",
+    "model": "per_workflow or per_user or annual_subscription"
+  },
+  "evidence_requirements": [
+    {
+      "type": "integration_breadth",
+      "description": "Proof of integration with buyer's specific systems (not just 'we support 1000+ apps')",
+      "weight": 0.30,
+      "required": true
+    },
+    {
+      "type": "similar_process_case_study",
+      "description": "Case study of similar multi-step process automated with measured time savings",
+      "weight": 0.25,
+      "required": true
+    },
+    {
+      "type": "ease_of_change",
+      "description": "Demonstration that business users can modify workflows without engineering",
+      "weight": 0.20,
+      "required": false
+    },
+    {
+      "type": "error_handling_demo",
+      "description": "Clear demonstration of exception handling, retry logic, and failure notifications",
+      "weight": 0.15,
+      "required": true
+    },
+    {
+      "type": "scalability_proof",
+      "description": "Evidence of handling buyer's expected volume without degradation",
+      "weight": 0.10,
+      "required": false
+    }
+  ],
+  "red_flags_for_buyer": [
+    "Vendor claims '1000+ integrations' but can't demonstrate buyer's specific systems",
+    "No error handling or failure notification built in",
+    "Requires dedicated developer to build and maintain every workflow",
+    "No visibility into running process status",
+    "Vendor locks buyer into proprietary format (no export/migration path)",
+    "Cannot handle conditional logic or branching (only linear processes)"
+  ],
+  "red_flags_for_vendor": [
+    "Buyer has no documented process (steps unclear, people disagree)",
+    "Buyer's systems have no API access and won't allow integration",
+    "Buyer expects 100% automation of a process with heavy human judgement",
+    "No process owner who can validate automation logic",
+    "Buyer's process changes weekly (too unstable to automate)"
+  ],
+  "vendor_capability_requirements": [
+    "Visual workflow builder (low-code/no-code preferred)",
+    "API connectors for common and custom systems",
+    "Conditional logic, branching, and loops",
+    "Error handling (retry, escalation, notification)",
+    "Approval steps with role-based routing",
+    "Process monitoring dashboard (status, bottlenecks, failures)",
+    "Audit trail",
+    "Version control for workflow definitions",
+    "AI-enhanced steps (classification, extraction, decision support)"
+  ],
+  "decision_questions": [
+    "Can you demonstrate integration with [our specific systems]?",
+    "Can business users modify workflows or is developer required?",
+    "How do you handle failures and exceptions mid-process?",
+    "What visibility do we have into running process instances?",
+    "Is there an audit trail for compliance?",
+    "How do you handle conditional logic and branching?",
+    "What happens if we need to change a live workflow?",
+    "What is your pricing model at our expected volume?",
+    "Can we start with one process and expand?"
+  ],
+  "adjacent_categories": ["procurement_workflow_automation", "finance_backoffice_automation", "email_workflow_automation", "sales_operations_automation"],
+  "differentiation_from_adjacent": {
+    "vs_procurement_workflow_automation": "Workflow orchestration is generic multi-system routing; procurement automation has procurement-specific logic (PO matching, supplier risk, spend analysis).",
+    "vs_finance_backoffice_automation": "Workflow orchestration connects any systems; finance automation understands accounting rules, reconciliation, and close processes.",
+    "vs_email_workflow_automation": "Workflow orchestration handles downstream multi-step processes; email automation handles the inbox triage layer.",
+    "vs_sales_operations_automation": "Workflow orchestration is generic; sales ops understands pipeline, leads, and revenue logic."
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "category_id": "email_workflow_automation",
+  "category_name": "Email & Inbox Workflow Automation",
+  "category_type": "product_category",
+  "parent_category": "Document Automation",
+  "description": "AI-powered classification, routing, extraction, and response automation for business email inboxes. Handles supplier emails, customer requests, internal requests — converting chaotic shared inboxes into structured, prioritized, auto-triaged workflows.",
+  "buyer_problem_patterns": [
+    "Our shared inbox receives hundreds of emails daily that need manual triage",
+    "We miss important supplier communications in email noise",
+    "Responding to routine inquiries takes too much staff time",
+    "We can't prioritize urgent emails from routine ones",
+    "Email attachments need to be manually saved and filed",
+    "Staff spend 2+ hours daily sorting and routing emails"
+  ],
+  "diagnostic_triggers": {
+    "positive_signals": [
+      "Shared inbox mentioned with high volume",
+      "Manual triage/sorting is the pain point",
+      "Missed emails causing operational issues",
+      "Response time SLAs not being met",
+      "Clear categorization already exists (just not automated)"
+    ],
+    "negative_signals": [
+      "Problem is about document data extraction (not routing)",
+      "Buyer needs outbound marketing automation",
+      "Low email volume with complex content requiring human judgement",
+      "Problem is really CRM (relationship management, not inbox triage)"
+    ],
+    "minimum_thresholds": {
+      "emails_per_day": 50,
+      "shared_inbox_count": 1
+    },
+    "disqualifiers": [
+      "Fewer than 30 emails/day per inbox (manual is still viable)",
+      "No clear categories or routing logic exists",
+      "All emails require unique human expert response",
+      "Buyer needs full CRM, not inbox automation"
+    ]
+  },
+  "typical_use_cases": [
+    "Supplier email classification and routing to correct department",
+    "Order confirmation extraction and filing",
+    "Customer inquiry auto-response for FAQs",
+    "Attachment extraction and filing to correct folder/system",
+    "Escalation detection (urgent issues flagged immediately)",
+    "SLA-based prioritization of response queue"
+  ],
+  "not_for": [
+    "Companies with low email volume (<50/day per inbox)",
+    "Companies that need full CRM (this is inbox automation, not relationship management)",
+    "Highly sensitive/regulated communications requiring human-only handling at all times",
+    "Marketing email campaigns (this is inbound processing, not outbound)",
+    "Companies without clear routing rules or email categories",
+    "1:1 executive communication (this is for operational/shared inboxes)"
+  ],
+  "required_buyer_inputs": [
+    "Email volume per day/week per inbox",
+    "Number of shared inboxes to automate",
+    "Current routing/triage process and categories",
+    "Most common email types and their handling rules",
+    "Response templates if any exist",
+    "Integration targets (CRM, ERP, ticketing system)",
+    "Languages of incoming emails"
+  ],
+  "typical_integrations": ["Microsoft 365", "Google Workspace", "Salesforce", "Zendesk", "ServiceNow", "SAP", "Slack", "Microsoft Teams", "Jira"],
+  "buyer_roles": ["Head of Operations", "Customer Service Manager", "Office Manager", "Head of Procurement", "IT Manager", "Shared Services Lead"],
+  "success_metrics": [
+    "Average response time reduction",
+    "Correct classification rate (%)",
+    "Emails handled without human intervention (%)",
+    "Missed urgent email rate reduction",
+    "Staff hours saved per week on triage",
+    "SLA compliance rate improvement"
+  ],
+  "implementation_complexity": "low-medium",
+  "typical_timeline_weeks": { "min": 2, "max": 6 },
+  "budget_band": {
+    "min": 5000,
+    "max": 80000,
+    "currency": "EUR",
+    "model": "per_mailbox or per_email_volume or annual_subscription"
+  },
+  "evidence_requirements": [
+    {
+      "type": "classification_accuracy",
+      "description": "Documented classification accuracy on similar email types/volumes",
+      "weight": 0.30,
+      "required": true
+    },
+    {
+      "type": "email_platform_integration",
+      "description": "Proven integration with buyer's email platform (M365/Gmail)",
+      "weight": 0.25,
+      "required": true
+    },
+    {
+      "type": "volume_case_study",
+      "description": "Case study showing volume handled and time savings achieved",
+      "weight": 0.20,
+      "required": false
+    },
+    {
+      "type": "gdpr_compliance",
+      "description": "Data privacy/GDPR compliance documentation and data residency clarity",
+      "weight": 0.15,
+      "required": true
+    },
+    {
+      "type": "response_quality_samples",
+      "description": "Examples of auto-generated responses showing quality/tone",
+      "weight": 0.10,
+      "required": false
+    }
+  ],
+  "red_flags_for_buyer": [
+    "No support for buyer's email platform",
+    "Requires full email access without clear data boundaries or privacy controls",
+    "No human fallback for misclassified emails",
+    "Claims full automation without acknowledging edge cases",
+    "No GDPR/data residency compliance documentation",
+    "Cannot handle multi-language emails"
+  ],
+  "red_flags_for_vendor": [
+    "Buyer has no categorization of email types (no routing logic to automate)",
+    "Buyer expects AI to understand deeply nuanced context without any training data",
+    "No IT support for email system integration/API access",
+    "Highly varied email content with no recurring patterns",
+    "Buyer confuses this with outbound email marketing automation"
+  ],
+  "vendor_capability_requirements": [
+    "Email platform connector (M365 and/or Gmail)",
+    "NLP classification engine (multi-label)",
+    "Configurable routing rules and categories",
+    "Attachment extraction and filing",
+    "Response suggestion or auto-response capability",
+    "Audit trail and compliance logging",
+    "Multi-language classification",
+    "Escalation/priority detection"
+  ],
+  "decision_questions": [
+    "Do you support [our email platform: M365/Gmail/other]?",
+    "How do you handle multi-language emails?",
+    "What happens when classification confidence is low?",
+    "Where is email data stored and processed (GDPR)?",
+    "Can we define custom categories and routing rules without engineering?",
+    "What is classification accuracy after initial training period?",
+    "How do you handle attachments (extract, file, or ignore)?",
+    "What does the human review interface look like for edge cases?",
+    "Can rules be changed by business users or only admins?"
+  ],
+  "adjacent_categories": ["ai_document_processing", "customer_support_automation", "workflow_orchestration"],
+  "differentiation_from_adjacent": {
+    "vs_ai_document_processing": "Email automation classifies and routes whole messages; document processing extracts structured fields from attachments/files.",
+    "vs_customer_support_automation": "Email automation is broader (any business inbox); customer support automation is specifically for support tickets and customer-facing channels.",
+    "vs_workflow_orchestration": "Email automation handles the inbox/triage layer; workflow orchestration handles downstream multi-step task routing across systems."
+  }
+}

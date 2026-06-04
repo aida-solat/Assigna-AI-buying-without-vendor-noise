@@ -1,0 +1,76 @@
+{
+  "vendor_id": "docuai",
+  "vendor_name": "DocuAI",
+  "description": "Enterprise document intelligence platform specializing in invoice, contract, and form processing with multi-language OCR and ERP integration.",
+  "website": "https://docuai.example.com",
+  "headquarters": "Munich, Germany",
+  "founded_year": 2019,
+  "company_size": "51-200",
+  "categories": [
+    {
+      "category_id": "ai_document_processing",
+      "strength": 0.9,
+      "evidence": [
+        {
+          "type": "accuracy_benchmark",
+          "description": "97.2% field extraction accuracy on invoices across 15 document types in manufacturing sector",
+          "quality": 0.92,
+          "status": "verified",
+          "source_url": "https://docuai.example.com/case-studies/manufacturing"
+        },
+        {
+          "type": "same_industry_case_study",
+          "description": "Deployed at Siemens subsidiary processing 12,000 invoices/month, reduced processing time by 78%",
+          "quality": 0.88,
+          "status": "verified"
+        },
+        {
+          "type": "integration_proof",
+          "description": "Native SAP S/4HANA and Oracle connectors with certified integration",
+          "quality": 0.85,
+          "status": "verified"
+        },
+        {
+          "type": "language_support",
+          "description": "Supports 14 European languages including German, French, Dutch, Polish",
+          "quality": 0.80,
+          "status": "self_declared"
+        },
+        {
+          "type": "pilot_availability",
+          "description": "2-week free POC on customer documents, up to 500 documents",
+          "quality": 0.90,
+          "status": "verified"
+        }
+      ],
+      "integrations_supported": ["SAP S/4HANA", "SAP Business One", "Oracle", "Microsoft Dynamics", "NetSuite", "CSV/API"],
+      "typical_timeline_weeks": 6,
+      "pricing_notes": "Per-document pricing (€0.15-€0.50/doc) or annual license starting €25K"
+    },
+    {
+      "category_id": "finance_backoffice_automation",
+      "strength": 0.6,
+      "evidence": [
+        {
+          "type": "erp_integration_proof",
+          "description": "SAP and Oracle integration for AP automation workflow",
+          "quality": 0.70,
+          "status": "self_declared"
+        },
+        {
+          "type": "accuracy_metrics",
+          "description": "99.1% matching accuracy on three-way PO matching",
+          "quality": 0.65,
+          "status": "self_declared"
+        }
+      ],
+      "integrations_supported": ["SAP", "Oracle"],
+      "typical_timeline_weeks": 10,
+      "pricing_notes": "Module add-on to document processing license"
+    }
+  ],
+  "languages_supported": ["de", "en", "fr", "nl", "pl", "it", "es", "pt", "cs", "sk", "hu", "ro", "bg", "hr"],
+  "certifications": ["SOC2 Type II", "ISO 27001", "GDPR compliant"],
+  "deployment_model": ["cloud", "on-premise"],
+  "red_flags": []
+}
