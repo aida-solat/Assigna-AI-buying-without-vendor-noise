@@ -1,6 +1,6 @@
 # Assigna
 
-[![CI](https://github.com/deciwa/assigna/actions/workflows/ci.yml/badge.svg)](https://github.com/deciwa/assigna/actions/workflows/ci.yml)
+[![CI](https://github.com/aida-solat/Assigna-AI-buying-without-vendor-noise/actions/workflows/ci.yml/badge.svg)](https://github.com/aida-solat/Assigna-AI-buying-without-vendor-noise/actions/workflows/ci.yml)
 [![License: BSL 1.1](https://img.shields.io/badge/License-BSL%201.1-blue.svg)](LICENSE)
 [![Backend Tests](https://img.shields.io/badge/tests-71%20passing-brightgreen)](backend/)
 [![Frontend Routes](https://img.shields.io/badge/routes-26-blue)](frontend/)
@@ -236,7 +236,7 @@ pnpm build
 
 ## Sponsor
 
-If Assigna is useful to your work or research, consider [sponsoring the project](https://github.com/sponsors/deciwa).
+If Assigna is useful to your work or research, consider [sponsoring the project](https://github.com/sponsors/aida-solat).
 
 ## License
 
