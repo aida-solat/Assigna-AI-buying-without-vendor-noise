@@ -1,4 +1,4 @@
-# Assigna \_\_ AI buying without vendor noise
+# Assigna — AI buying without vendor noise
 
 [![CI](https://github.com/aida-solat/Assigna-AI-buying-without-vendor-noise/actions/workflows/ci.yml/badge.svg)](https://github.com/aida-solat/Assigna-AI-buying-without-vendor-noise/actions/workflows/ci.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
@@ -153,15 +153,14 @@ assigna/
 │   │   ├── vendors/  # Vendor profiles + evidence
 │   │   └── data/     # 10 category JSONs + vendor JSONs
 │   └── tests/        # 71 tests
-├── frontend/         # Next.js 16 + TypeScript + Tailwind
-│   └── src/
-│       ├── app/      # 26 routes (public + buyer + admin)
-│       ├── components/ # 27 reusable components
-│       └── lib/      # Types, validation, API client
-└── docs/
-    ├── prd.md
-    └── solution-taxonomy.md
+└── frontend/         # Next.js 16 + TypeScript + Tailwind
+    └── src/
+        ├── app/        # 26 routes (public + buyer + admin)
+        ├── components/ # 27 reusable components
+        └── lib/        # Types, validation, API client
 ```
+
+For design rationale and the reasoning behind the deterministic engine, see [`ARCHITECTURE.md`](ARCHITECTURE.md).
 
 ## Tech Stack
 
