@@ -134,7 +134,7 @@ class TaxonomyCategory(BaseModel):
 
 
 class TaxonomyIndex(BaseModel):
-    """Auto-generated index over all loaded categories."""
+    """Computed index over all loaded categories."""
 
     categories: dict[str, str] = Field(
         description="category_id → JSON filename"
