@@ -6,13 +6,12 @@ type ButtonSize = "sm" | "md" | "lg";
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm",
+    "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_8px_24px_-8px_rgba(124,108,255,0.7)]",
   secondary:
-    "bg-secondary text-white hover:bg-secondary/90",
-  ghost:
-    "hover:bg-muted text-foreground",
+    "bg-secondary text-foreground border border-border hover:bg-secondary/70",
+  ghost: "hover:bg-muted text-foreground",
   outline:
-    "border border-border hover:bg-muted text-foreground",
+    "border border-border bg-card/40 hover:bg-muted hover:border-primary/40 text-foreground",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
@@ -27,7 +26,10 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant = "primary", size = "md", className, children, ...props }, ref) => {
+  (
+    { variant = "primary", size = "md", className, children, ...props },
+    ref,
+  ) => {
     return (
       <button
         ref={ref}
@@ -35,14 +37,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           "inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none cursor-pointer",
           variantStyles[variant],
           sizeStyles[size],
-          className
+          className,
         )}
         {...props}
       >
         {children}
       </button>
     );
-  }
+  },
 );
 
 Button.displayName = "Button";

@@ -1,19 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
-  --muted: #f1f5f9;
-  --muted-foreground: #475569;
-  --border: #e2e8f0;
-  --card: #ffffff;
-  --primary: #2563eb;
+  /* Decision Engine — dark technical theme */
+  --background: #070a12;
+  --foreground: #e7ecf3;
+  --muted: #121a28;
+  --muted-foreground: #8b97ac;
+  --border: #1c2533;
+  --card: #0d1320;
+  --card-elevated: #131c2b;
+  --primary: #7c6cff;
   --primary-foreground: #ffffff;
-  --secondary: #334155;
-  --positive: #16a34a;
-  --warning: #d97706;
-  --risk: #dc2626;
-  --evidence: #7c3aed;
+  --secondary: #1e2839;
+  --positive: #34d399;
+  --warning: #fbbf24;
+  --risk: #f87171;
+  --evidence: #a78bfa;
+  --accent: #22d3ee;
 }
 
 @theme inline {
@@ -23,6 +26,7 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
   --color-card: var(--card);
+  --color-card-elevated: var(--card-elevated);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
@@ -30,6 +34,7 @@
   --color-warning: var(--warning);
   --color-risk: var(--risk);
   --color-evidence: var(--evidence);
+  --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -38,8 +43,116 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 .tabular-nums {
   font-variant-numeric: tabular-nums;
+}
+
+/* ─── Decision Engine utilities ─────────────────────────────────────── */
+
+/* Ambient radial glow used on hero / section backdrops */
+.engine-glow {
+  background:
+    radial-gradient(
+      60rem 40rem at 75% -10%,
+      rgba(124, 108, 255, 0.16),
+      transparent 60%
+    ),
+    radial-gradient(
+      50rem 30rem at 10% 10%,
+      rgba(34, 211, 238, 0.1),
+      transparent 55%
+    );
+}
+
+/* Fine technical grid background */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(
+    ellipse 90% 70% at 50% 0%,
+    black 40%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 90% 70% at 50% 0%,
+    black 40%,
+    transparent 100%
+  );
+}
+
+/* Dotted background */
+.bg-dots {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.06) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+}
+
+/* Gradient signature text */
+.text-gradient {
+  background: linear-gradient(
+    100deg,
+    var(--primary) 0%,
+    var(--accent) 55%,
+    var(--evidence) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Hairline gradient border card */
+.surface {
+  background: linear-gradient(180deg, var(--card-elevated), var(--card));
+  border: 1px solid var(--border);
+}
+
+.surface-glow {
+  box-shadow:
+    0 0 0 1px rgba(124, 108, 255, 0.18),
+    0 24px 60px -28px rgba(124, 108, 255, 0.45);
+}
+
+/* Mono label tag */
+.mono-label {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Animated scanning bar */
+@keyframes engine-scan {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}
+.animate-scan {
+  animation: engine-scan 2.6s ease-in-out infinite;
+}
+
+@keyframes engine-pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.animate-engine-pulse {
+  animation: engine-pulse 2s ease-in-out infinite;
+}
+
+::selection {
+  background: rgba(124, 108, 255, 0.3);
+  color: #fff;
 }

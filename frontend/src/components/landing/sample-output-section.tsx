@@ -5,18 +5,25 @@ import { ArrowRight, Lock } from "lucide-react";
 
 export function SampleOutputSection() {
   return (
-    <section className="py-20 px-6">
+    <section className="py-24 px-6">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-4">What you get</h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-lg mx-auto">
-          A Decision Brief — not a vendor list. Evidence, reasoning, risks, and
-          questions before any sales call.
-        </p>
+        <div className="text-center mb-12">
+          <span className="mono-label text-[11px] text-evidence">
+            The output
+          </span>
+          <h2 className="mt-3 text-3xl md:text-4xl font-bold tracking-tight">
+            A Decision Brief, not a vendor list
+          </h2>
+          <p className="mt-4 text-muted-foreground max-w-lg mx-auto">
+            Evidence, reasoning, risks, and the questions to ask — before any
+            sales call.
+          </p>
+        </div>
 
         <Card className="relative overflow-hidden">
           <div className="space-y-5">
             <div>
-              <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">
+              <p className="mono-label text-[10px] text-muted-foreground mb-2">
                 Primary Recommendation
               </p>
               <p className="text-lg font-semibold text-primary">

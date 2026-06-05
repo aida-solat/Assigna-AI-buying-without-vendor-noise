@@ -547,22 +547,60 @@ export default function NewProblemPage() {
     );
   }
 
+  const wizardSteps: { id: Step; label: string }[] = [
+    { id: "problem", label: "Problem" },
+    { id: "context", label: "Context" },
+    { id: "details", label: "Details" },
+  ];
+  const activeIndex = wizardSteps.findIndex((s) => s.id === step);
+
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
-      <h1 className="text-2xl font-bold mb-2">
+      <span className="mono-label text-[11px] text-accent">Intake</span>
+      <h1 className="mt-2 text-2xl md:text-3xl font-bold tracking-tight">
         {step === "problem"
           ? "Describe your business problem"
           : step === "context"
             ? "Company context"
             : "Operational details"}
       </h1>
-      <p className="text-sm text-muted-foreground mb-8">
+      <p className="text-sm text-muted-foreground mt-2 mb-6">
         {step === "problem"
           ? "In plain language. No category selection needed."
           : step === "context"
             ? "Help us refine the diagnosis with context."
             : "Specific questions based on your detected category."}
       </p>
+
+      <div className="flex items-center gap-2 mb-8">
+        {wizardSteps.map((s, i) => (
+          <div key={s.id} className="flex items-center gap-2">
+            <span
+              className={`flex items-center gap-1.5 mono-label text-[10px] ${
+                i <= activeIndex ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              <span
+                className={`flex h-5 w-5 items-center justify-center rounded-full border tabular-nums ${
+                  i < activeIndex
+                    ? "border-primary bg-primary text-primary-foreground"
+                    : i === activeIndex
+                      ? "border-primary text-primary"
+                      : "border-border text-muted-foreground"
+                }`}
+              >
+                {i + 1}
+              </span>
+              {s.label}
+            </span>
+            {i < wizardSteps.length - 1 && (
+              <span
+                className={`h-px w-8 ${i < activeIndex ? "bg-primary" : "bg-border"}`}
+              />
+            )}
+          </div>
+        ))}
+      </div>
 
       {error && (
         <div className="mb-6 p-4 bg-risk/10 border border-risk/20 rounded-xl text-sm text-risk">
@@ -928,7 +966,19 @@ export default function NewProblemPage() {
 
         <div className="lg:col-span-2">
           <Card className="sticky top-20">
-            <h3 className="text-sm font-semibold mb-3">Detected Signals</h3>
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="mono-label text-[11px] text-muted-foreground">
+                Signal Extraction
+              </h3>
+              <span className="flex items-center gap-1.5 text-[10px] text-positive">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="absolute inline-flex h-full w-full rounded-full bg-positive opacity-75 animate-engine-pulse" />
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-positive" />
+                </span>
+                {detectedSignals.filter((s) => s.detected).length}/
+                {detectedSignals.length || 0} live
+              </span>
+            </div>
             {detectedSignals.length === 0 ? (
               <p className="text-xs text-muted-foreground">
                 Start typing to see signal extraction...

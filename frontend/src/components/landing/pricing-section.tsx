@@ -64,27 +64,37 @@ const tiers = [
 
 export function PricingSection() {
   return (
-    <section className="py-20 px-6">
+    <section className="py-24 px-6 border-t border-border">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-4">Pricing</h2>
-        <p className="text-center text-muted-foreground mb-14 max-w-md mx-auto">
-          Ranking is based on fit and evidence, not paid placement. Vendors
-          cannot buy higher ranking.
-        </p>
+        <div className="text-center mb-14">
+          <span className="mono-label text-[11px] text-primary">Pricing</span>
+          <h2 className="mt-3 text-3xl md:text-4xl font-bold tracking-tight">
+            Pay for the decision, not the ranking
+          </h2>
+          <p className="mt-4 text-muted-foreground max-w-md mx-auto">
+            Ranking is based on fit and evidence. Vendors cannot buy a higher
+            position — ever.
+          </p>
+        </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
           {tiers.map((tier) => (
             <Card
               key={tier.name}
-              className={`flex flex-col ${
-                tier.highlighted
-                  ? "ring-2 ring-primary shadow-md"
-                  : ""
+              className={`relative flex flex-col ${
+                tier.highlighted ? "surface-glow border-primary/40" : ""
               }`}
             >
+              {tier.highlighted && (
+                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 rounded-full bg-primary px-2.5 py-0.5 mono-label text-[9px] text-primary-foreground">
+                  Most popular
+                </span>
+              )}
               <div className="mb-4">
                 <h3 className="font-semibold text-base">{tier.name}</h3>
                 <div className="mt-2">
-                  <span className="text-2xl font-bold">{tier.price}</span>
+                  <span className="text-2xl font-bold tabular-nums">
+                    {tier.price}
+                  </span>
                 </div>
                 <p className="text-xs text-muted-foreground mt-2">
                   {tier.description}
